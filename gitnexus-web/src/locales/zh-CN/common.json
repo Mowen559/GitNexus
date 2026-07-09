@@ -82,5 +82,106 @@
   "units": {
     "elapsedSeconds": "{{seconds}} 秒",
     "elapsedMinutesSeconds": "{{minutes}} 分 {{seconds}} 秒"
+  },
+  "close": "关闭",
+  "loading": "加载中…",
+  "menu": "菜单",
+  "preferences": "偏好设置",
+  "nodeInfo": {
+    "title": "节点详情",
+    "details": "详情",
+    "selectNode": "选择一个节点查看详情",
+    "file": "文件",
+    "openCode": "打开代码",
+    "viewHistory": "历史",
+    "languageConcepts": "语言概念",
+    "tags": "标签",
+    "steps": "步骤",
+    "definedInThisFile": "在此文件中定义",
+    "connections": "关联"
+  },
+  "domainGraph": {
+    "structuralTab": "结构图",
+    "domainTab": "领域图",
+    "generate": "生成领域图",
+    "generating": "正在生成领域图…",
+    "error": "领域图生成失败",
+    "retry": "重试",
+    "emptyTitle": "尚无领域图",
+    "emptyHint": "使用你配置的 LLM，从已分析的代码库生成业务领域视图。",
+    "entryPoint": "入口",
+    "entryType": "入口类型",
+    "entities": "实体",
+    "businessRules": "业务规则",
+    "crossDomainInteractions": "跨域交互"
+  },
+  "tour": {
+    "title": "引导教程",
+    "start": "开始引导教程",
+    "tour": "引导",
+    "exit": "退出",
+    "languageLesson": "语言讲解",
+    "referencedComponents": "引用的组件",
+    "prev": "上一步",
+    "next": "下一步",
+    "finish": "完成"
+  },
+  "pathFinder": {
+    "title": "依赖路径查找",
+    "tooltip": "查找依赖路径",
+    "path": "路径",
+    "description": "查找依赖图中两个节点之间的最短路径。",
+    "fromNode": "起始节点",
+    "toNode": "目标节点",
+    "selectNode": "选择一个节点...",
+    "searching": "正在查找...",
+    "findPath": "查找路径",
+    "noPath": "这两个节点之间没有找到路径。",
+    "pathFound": "找到路径"
+  },
+  "filter": {
+    "title": "筛选图谱",
+    "filter": "筛选",
+    "nodeTypes": "节点类型",
+    "complexity": "复杂度",
+    "layers": "层级",
+    "edgeCategories": "边类别",
+    "resetAll": "全部重置"
+  },
+  "export": {
+    "title": "导出图谱",
+    "label": "导出",
+    "asPNG": "导出为 PNG",
+    "asSVG": "导出为 SVG",
+    "asJSON": "导出为 JSON"
+  },
+  "theme": {
+    "changeTheme": "切换主题",
+    "theme": "主题",
+    "accentColor": "强调色",
+    "headingFont": "标题字体",
+    "serif": "衬线",
+    "sans": "无衬线",
+    "mono": "等宽"
+  },
+  "layer": {
+    "back": "所有层级",
+    "label": "层",
+    "nodes": "个节点"
+  },
+  "fileHistory": {
+    "title": "文件历史",
+    "noHistory": "该文件没有 git 历史记录",
+    "diff": "差异",
+    "version": "版本",
+    "viewingVersion": "正在查看 {{hash}}",
+    "comparing": "{{from}} → {{to}}",
+    "selectCommit": "选择一个提交",
+    "noTextChange": "该文件没有文本变更"
+  },
+  "mobile": {
+    "graph": "图谱",
+    "files": "文件",
+    "chat": "AI"
   }
 }

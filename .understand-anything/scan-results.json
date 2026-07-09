@@ -1,0 +1,5051 @@
+{
+  "scriptCompleted": true,
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "language": "json",
+      "sizeLines": 19,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".cursorrules",
+      "language": "unknown",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".dockerignore",
+      "language": "unknown",
+      "sizeLines": 21,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".git-blame-ignore-revs",
+      "language": "unknown",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".gitattributes",
+      "language": "unknown",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".gitleaks.toml",
+      "language": "toml",
+      "sizeLines": 12,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".husky/pre-commit",
+      "language": "unknown",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".mcp.json",
+      "language": "json",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".prettierignore",
+      "language": "unknown",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/fingerprints.json",
+      "language": "json",
+      "sizeLines": 151161,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/intermediate/scan-result.json",
+      "language": "json",
+      "sizeLines": 21400,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/knowledge-graph.json",
+      "language": "json",
+      "sizeLines": 46342,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/meta.json",
+      "language": "json",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".understand-anything/scan-results.json",
+      "language": "json",
+      "sizeLines": 4042,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".windsurfrules",
+      "language": "unknown",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "build-gitnexus.cmd",
+      "language": "batch",
+      "sizeLines": 4,
+      "fileCategory": "script"
+    },
+    {
+      "path": "deploy/kubernetes/cluster-image-policy.yaml",
+      "language": "yaml",
+      "sizeLines": 76,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "docker-compose.yaml",
+      "language": "yaml",
+      "sizeLines": 51,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "docker-server.mjs",
+      "language": "javascript",
+      "sizeLines": 175,
+      "fileCategory": "code"
+    },
+    {
+      "path": "Dockerfile.cli",
+      "language": "dockerfile",
+      "sizeLines": 80,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "Dockerfile.web",
+      "language": "dockerfile",
+      "sizeLines": 48,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "eslint-rules/require-safe-parse.mjs",
+      "language": "javascript",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "language": "javascript",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-claude-plugin/.claude-plugin/plugin.json",
+      "language": "json",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-claude-plugin/.mcp.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-claude-plugin/hooks/gitnexus-hook.js",
+      "language": "javascript",
+      "sizeLines": 375,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-claude-plugin/hooks/hook-db-lock-probe.cjs",
+      "language": "javascript",
+      "sizeLines": 241,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-claude-plugin/hooks/hook-lock.js",
+      "language": "javascript",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-claude-plugin/hooks/hooks.json",
+      "language": "json",
+      "sizeLines": 30,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-claude-plugin/hooks/resolve-analyze-cmd.cjs",
+      "language": "javascript",
+      "sizeLines": 323,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-claude-plugin/hooks/win-rm-list-json.ps1",
+      "language": "powershell",
+      "sizeLines": 76,
+      "fileCategory": "script"
+    },
+    {
+      "path": "gitnexus-claude-plugin/skills/gitnexus-cli/mcp.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-claude-plugin/skills/gitnexus-debugging/mcp.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-claude-plugin/skills/gitnexus-exploring/mcp.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-claude-plugin/skills/gitnexus-guide/mcp.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-claude-plugin/skills/gitnexus-impact-analysis/mcp.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-claude-plugin/skills/gitnexus-refactoring/mcp.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-cursor-integration/hooks/gitnexus-hook.cjs",
+      "language": "javascript",
+      "sizeLines": 269,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-cursor-integration/hooks/hook-lock.cjs",
+      "language": "javascript",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-cursor-integration/hooks/hooks.json",
+      "language": "json",
+      "sizeLines": 12,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-shared/package.json",
+      "language": "json",
+      "sizeLines": 29,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-shared/src/graph/types.ts",
+      "language": "typescript",
+      "sizeLines": 166,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/index.ts",
+      "language": "typescript",
+      "sizeLines": 195,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/integrations/circuit-breaker.ts",
+      "language": "typescript",
+      "sizeLines": 273,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/integrations/resilient-fetch.ts",
+      "language": "typescript",
+      "sizeLines": 279,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/integrations/retry.ts",
+      "language": "typescript",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/integrations/understand-quickly.ts",
+      "language": "typescript",
+      "sizeLines": 151,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/language-detection.ts",
+      "language": "typescript",
+      "sizeLines": 160,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/languages.ts",
+      "language": "typescript",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/lbug/schema-constants.ts",
+      "language": "typescript",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/mro-strategy.ts",
+      "language": "typescript",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/pipeline.ts",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/def-index.ts",
+      "language": "typescript",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/evidence-weights.ts",
+      "language": "typescript",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/finalize-algorithm.ts",
+      "language": "typescript",
+      "sizeLines": 1035,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/language-classification.ts",
+      "language": "typescript",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/method-dispatch-index.ts",
+      "language": "typescript",
+      "sizeLines": 193,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/module-scope-index.ts",
+      "language": "typescript",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/origin-priority.ts",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/parsed-file.ts",
+      "language": "typescript",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/position-index.ts",
+      "language": "typescript",
+      "sizeLines": 166,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/qualified-name-index.ts",
+      "language": "typescript",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/reference-site.ts",
+      "language": "typescript",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/registries/class-registry.ts",
+      "language": "typescript",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/registries/context.ts",
+      "language": "typescript",
+      "sizeLines": 171,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/registries/evidence.ts",
+      "language": "typescript",
+      "sizeLines": 196,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/registries/field-registry.ts",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/registries/lookup-core.ts",
+      "language": "typescript",
+      "sizeLines": 465,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/registries/lookup-qualified.ts",
+      "language": "typescript",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/registries/macro-registry.ts",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/registries/method-registry.ts",
+      "language": "typescript",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/registries/tie-breaks.ts",
+      "language": "typescript",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/resolve-type-ref.ts",
+      "language": "typescript",
+      "sizeLines": 148,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/scope-id.ts",
+      "language": "typescript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/scope-tree.ts",
+      "language": "typescript",
+      "sizeLines": 295,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/shadow/aggregate.ts",
+      "language": "typescript",
+      "sizeLines": 188,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/shadow/diff.ts",
+      "language": "typescript",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/symbol-definition.ts",
+      "language": "typescript",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/scope-resolution/types.ts",
+      "language": "typescript",
+      "sizeLines": 481,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/src/test-helpers.ts",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-shared/tsconfig.json",
+      "language": "json",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/index.html",
+      "language": "html",
+      "sizeLines": 18,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "gitnexus-web/package.json",
+      "language": "json",
+      "sizeLines": 94,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/playwright.config.ts",
+      "language": "typescript",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/App.tsx",
+      "language": "typescript",
+      "sizeLines": 352,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/AnalyzeOnboarding.tsx",
+      "language": "typescript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/AnalyzeProgress.tsx",
+      "language": "typescript",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/CodeReferencesPanel.tsx",
+      "language": "typescript",
+      "sizeLines": 593,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/DropZone.tsx",
+      "language": "typescript",
+      "sizeLines": 328,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/EmbeddingStatus.tsx",
+      "language": "typescript",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/ExportMenu.tsx",
+      "language": "typescript",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/FileDiffViewer.tsx",
+      "language": "typescript",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/FileHistoryModal.tsx",
+      "language": "typescript",
+      "sizeLines": 300,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/FileTreePanel.tsx",
+      "language": "typescript",
+      "sizeLines": 571,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/FilterPanel.tsx",
+      "language": "typescript",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/GraphCanvas.tsx",
+      "language": "typescript",
+      "sizeLines": 614,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/Header.tsx",
+      "language": "typescript",
+      "sizeLines": 488,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/HelpPanel.tsx",
+      "language": "typescript",
+      "sizeLines": 714,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/LanguageSwitcher.tsx",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/LayerLegend.tsx",
+      "language": "typescript",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/LoadingOverlay.tsx",
+      "language": "typescript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/MarkdownRenderer.tsx",
+      "language": "typescript",
+      "sizeLines": 234,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/MermaidDiagram.tsx",
+      "language": "typescript",
+      "sizeLines": 174,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/MobileBottomNav.tsx",
+      "language": "typescript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/MobileLayout.tsx",
+      "language": "typescript",
+      "sizeLines": 266,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/NodeInfo.tsx",
+      "language": "typescript",
+      "sizeLines": 462,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/OnboardingGuide.tsx",
+      "language": "typescript",
+      "sizeLines": 318,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/PathFinderModal.tsx",
+      "language": "typescript",
+      "sizeLines": 246,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/ProcessesPanel.tsx",
+      "language": "typescript",
+      "sizeLines": 573,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/ProcessFlowModal.tsx",
+      "language": "typescript",
+      "sizeLines": 326,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/QueryFAB.tsx",
+      "language": "typescript",
+      "sizeLines": 386,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/RepoAnalyzer.tsx",
+      "language": "typescript",
+      "sizeLines": 540,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/RepoLanding.tsx",
+      "language": "typescript",
+      "sizeLines": 153,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/RightPanel.tsx",
+      "language": "typescript",
+      "sizeLines": 463,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/settings/ProviderConfigCard.tsx",
+      "language": "typescript",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/SettingsPanel.tsx",
+      "language": "typescript",
+      "sizeLines": 1038,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/StatusBar.tsx",
+      "language": "typescript",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/ThemePicker.tsx",
+      "language": "typescript",
+      "sizeLines": 187,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/ToolCallCard.tsx",
+      "language": "typescript",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/TourPanel.tsx",
+      "language": "typescript",
+      "sizeLines": 164,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/UAToolbar.tsx",
+      "language": "typescript",
+      "sizeLines": 181,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/components/WebGPUFallbackDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 160,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/config/ignore-service.ts",
+      "language": "typescript",
+      "sizeLines": 320,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/config/ui-constants.ts",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/graph/domain-graph-generator.ts",
+      "language": "typescript",
+      "sizeLines": 238,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/graph/domain-graph-schema.ts",
+      "language": "typescript",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/graph/graph.ts",
+      "language": "typescript",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/graph/types.ts",
+      "language": "typescript",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/graph/ua-adapter.ts",
+      "language": "typescript",
+      "sizeLines": 312,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/graph/ua-model.ts",
+      "language": "typescript",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/ingestion/cluster-enricher.ts",
+      "language": "typescript",
+      "sizeLines": 243,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/llm/agent.ts",
+      "language": "typescript",
+      "sizeLines": 719,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/llm/context-builder.ts",
+      "language": "typescript",
+      "sizeLines": 426,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/llm/deepseek-chat-model.ts",
+      "language": "typescript",
+      "sizeLines": 257,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/llm/index.ts",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/llm/settings-service.ts",
+      "language": "typescript",
+      "sizeLines": 469,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/llm/tools.ts",
+      "language": "typescript",
+      "sizeLines": 1501,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/core/llm/types.ts",
+      "language": "typescript",
+      "sizeLines": 442,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/hooks/app-state/graph.tsx",
+      "language": "typescript",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/hooks/useAppState.tsx",
+      "language": "typescript",
+      "sizeLines": 1413,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/hooks/useAutoScroll.ts",
+      "language": "typescript",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/hooks/useBackend.ts",
+      "language": "typescript",
+      "sizeLines": 155,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/hooks/useIsMobile.ts",
+      "language": "typescript",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/hooks/useSettings.ts",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/hooks/useSigma.ts",
+      "language": "typescript",
+      "sizeLines": 1575,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/hooks/useUAFeatures.tsx",
+      "language": "typescript",
+      "sizeLines": 318,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/i18n/error-messages.ts",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/i18n/index.ts",
+      "language": "typescript",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/i18n/languages.ts",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/i18n/progress.ts",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/i18n/resources.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/index.css",
+      "language": "css",
+      "sizeLines": 365,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "gitnexus-web/src/lib/circles-layout.ts",
+      "language": "typescript",
+      "sizeLines": 307,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/lib/constants.ts",
+      "language": "typescript",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/lib/graph-adapter.ts",
+      "language": "typescript",
+      "sizeLines": 654,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/lib/grounding-patterns.ts",
+      "language": "typescript",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/lib/lucide-icons.tsx",
+      "language": "typescript",
+      "sizeLines": 233,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/lib/mermaid-generator.ts",
+      "language": "typescript",
+      "sizeLines": 171,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/lib/path-resolution.ts",
+      "language": "typescript",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/lib/sigma-registry.ts",
+      "language": "typescript",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/lib/tree-layout.ts",
+      "language": "typescript",
+      "sizeLines": 570,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/lib/utils.ts",
+      "language": "typescript",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/locales/en/chat.json",
+      "language": "json",
+      "sizeLines": 37,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/en/common.json",
+      "language": "json",
+      "sizeLines": 187,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/en/errors.json",
+      "language": "json",
+      "sizeLines": 19,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/en/graph.json",
+      "language": "json",
+      "sizeLines": 181,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/en/header.json",
+      "language": "json",
+      "sizeLines": 16,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/en/help.json",
+      "language": "json",
+      "sizeLines": 96,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/en/onboarding.json",
+      "language": "json",
+      "sizeLines": 67,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/en/settings.json",
+      "language": "json",
+      "sizeLines": 93,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/zh-CN/chat.json",
+      "language": "json",
+      "sizeLines": 37,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/zh-CN/common.json",
+      "language": "json",
+      "sizeLines": 187,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/zh-CN/errors.json",
+      "language": "json",
+      "sizeLines": 19,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/zh-CN/graph.json",
+      "language": "json",
+      "sizeLines": 181,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/zh-CN/header.json",
+      "language": "json",
+      "sizeLines": 16,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/zh-CN/help.json",
+      "language": "json",
+      "sizeLines": 96,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/zh-CN/onboarding.json",
+      "language": "json",
+      "sizeLines": 67,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/locales/zh-CN/settings.json",
+      "language": "json",
+      "sizeLines": 93,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/src/main.tsx",
+      "language": "typescript",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/services/backend-client.ts",
+      "language": "typescript",
+      "sizeLines": 990,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/themes/index.ts",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/themes/presets.ts",
+      "language": "typescript",
+      "sizeLines": 183,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/themes/theme-engine.ts",
+      "language": "typescript",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/themes/ThemeContext.tsx",
+      "language": "typescript",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/themes/types.ts",
+      "language": "typescript",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/src/vite-env.d.ts",
+      "language": "typescript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/tsconfig.app.json",
+      "language": "json",
+      "sizeLines": 26,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/tsconfig.json",
+      "language": "json",
+      "sizeLines": 4,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/tsconfig.node.json",
+      "language": "json",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/vercel.json",
+      "language": "json",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus-web/vite.config.ts",
+      "language": "typescript",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus-web/vitest.config.ts",
+      "language": "typescript",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/.npmignore",
+      "language": "unknown",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/bench/python-scope/baseline-fingerprint.txt",
+      "language": "txt",
+      "sizeLines": 1,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "gitnexus/bench/python-scope/baseline-import-target-fingerprint.txt",
+      "language": "txt",
+      "sizeLines": 1,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "gitnexus/bench/python-scope/import-target-fingerprint.mjs",
+      "language": "javascript",
+      "sizeLines": 202,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/bench/python-scope/measure.mjs",
+      "language": "javascript",
+      "sizeLines": 220,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/bench/scope-capture/baselines.json",
+      "language": "json",
+      "sizeLines": 84,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus/bench/scope-capture/measure.mjs",
+      "language": "javascript",
+      "sizeLines": 409,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/Dockerfile.test",
+      "language": "dockerfile",
+      "sizeLines": 19,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "gitnexus/hooks/antigravity/gitnexus-antigravity-hook.cjs",
+      "language": "javascript",
+      "sizeLines": 347,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/hooks/claude/gitnexus-hook.cjs",
+      "language": "javascript",
+      "sizeLines": 370,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/hooks/claude/hook-db-lock-probe.cjs",
+      "language": "javascript",
+      "sizeLines": 241,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/hooks/claude/hook-lock.cjs",
+      "language": "javascript",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/hooks/claude/pre-tool-use.sh",
+      "language": "shell",
+      "sizeLines": 79,
+      "fileCategory": "script"
+    },
+    {
+      "path": "gitnexus/hooks/claude/resolve-analyze-cmd.cjs",
+      "language": "javascript",
+      "sizeLines": 323,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/hooks/claude/session-start.sh",
+      "language": "shell",
+      "sizeLines": 42,
+      "fileCategory": "script"
+    },
+    {
+      "path": "gitnexus/hooks/claude/win-rm-list-json.ps1",
+      "language": "powershell",
+      "sizeLines": 76,
+      "fileCategory": "script"
+    },
+    {
+      "path": "gitnexus/package.json",
+      "language": "json",
+      "sizeLines": 123,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus/scripts/bench-scope-resolution.ts",
+      "language": "typescript",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/scripts/build-tree-sitter-dart.cjs",
+      "language": "javascript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/scripts/build-tree-sitter-proto.cjs",
+      "language": "javascript",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/scripts/build-tree-sitter-swift.cjs",
+      "language": "javascript",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/scripts/build.js",
+      "language": "javascript",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/scripts/cross-platform-tests.ts",
+      "language": "typescript",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/scripts/install-duckdb-extension.mjs",
+      "language": "javascript",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/scripts/materialize-vendor-grammars.cjs",
+      "language": "javascript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/scripts/run-cross-platform.ts",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/shadow-parity-dashboard/index.html",
+      "language": "html",
+      "sizeLines": 291,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "gitnexus/src/cli/ai-context.ts",
+      "language": "typescript",
+      "sizeLines": 552,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/analyze-config.ts",
+      "language": "typescript",
+      "sizeLines": 426,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/analyze.ts",
+      "language": "typescript",
+      "sizeLines": 1399,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/augment.ts",
+      "language": "typescript",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/clean.ts",
+      "language": "typescript",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/cli-message.ts",
+      "language": "typescript",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/detect-changes-format.ts",
+      "language": "typescript",
+      "sizeLines": 86,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/doctor.ts",
+      "language": "typescript",
+      "sizeLines": 142,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/eval-server.ts",
+      "language": "typescript",
+      "sizeLines": 578,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/format-elapsed.ts",
+      "language": "typescript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/group.ts",
+      "language": "typescript",
+      "sizeLines": 376,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/help-i18n.ts",
+      "language": "typescript",
+      "sizeLines": 228,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/i18n/en.ts",
+      "language": "typescript",
+      "sizeLines": 254,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/i18n/index.ts",
+      "language": "typescript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/i18n/resources.ts",
+      "language": "typescript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/i18n/zh-CN.ts",
+      "language": "typescript",
+      "sizeLines": 236,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/index-repo.ts",
+      "language": "typescript",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/index.ts",
+      "language": "typescript",
+      "sizeLines": 275,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/lazy-action.ts",
+      "language": "typescript",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/list.ts",
+      "language": "typescript",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/mcp.ts",
+      "language": "typescript",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/optional-grammars.ts",
+      "language": "typescript",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/publish.ts",
+      "language": "typescript",
+      "sizeLines": 232,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/remove.ts",
+      "language": "typescript",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/resolve-invocation.ts",
+      "language": "typescript",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/serve.ts",
+      "language": "typescript",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/setup.ts",
+      "language": "typescript",
+      "sizeLines": 1044,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/skill-gen.ts",
+      "language": "typescript",
+      "sizeLines": 735,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/status.ts",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/tool.ts",
+      "language": "typescript",
+      "sizeLines": 218,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/cli/wiki.ts",
+      "language": "typescript",
+      "sizeLines": 828,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/config/ignore-service.ts",
+      "language": "typescript",
+      "sizeLines": 484,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/config/supported-languages.ts",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/augmentation/engine.ts",
+      "language": "typescript",
+      "sizeLines": 322,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embedding-mode.ts",
+      "language": "typescript",
+      "sizeLines": 86,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/ast-utils.ts",
+      "language": "typescript",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/character-chunk.ts",
+      "language": "typescript",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/chunker.ts",
+      "language": "typescript",
+      "sizeLines": 386,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/config.ts",
+      "language": "typescript",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/embedder.ts",
+      "language": "typescript",
+      "sizeLines": 430,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/embedding-pipeline.ts",
+      "language": "typescript",
+      "sizeLines": 750,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/exact-search.ts",
+      "language": "typescript",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/hf-env.ts",
+      "language": "typescript",
+      "sizeLines": 314,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/http-client.ts",
+      "language": "typescript",
+      "sizeLines": 266,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/index.ts",
+      "language": "typescript",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/line-index.ts",
+      "language": "typescript",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/runtime-support.ts",
+      "language": "typescript",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/server-mapping.ts",
+      "language": "typescript",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/structural-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/text-generator.ts",
+      "language": "typescript",
+      "sizeLines": 272,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/embeddings/types.ts",
+      "language": "typescript",
+      "sizeLines": 381,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/git-staleness.ts",
+      "language": "typescript",
+      "sizeLines": 190,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/graph/graph.ts",
+      "language": "typescript",
+      "sizeLines": 182,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/graph/types.ts",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/bridge-db.ts",
+      "language": "typescript",
+      "sizeLines": 747,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/bridge-schema.ts",
+      "language": "typescript",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/config-parser.ts",
+      "language": "typescript",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/contract-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/cross-impact.ts",
+      "language": "typescript",
+      "sizeLines": 652,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/elixir-workspace-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 254,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/fs-utils.ts",
+      "language": "typescript",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/go-workspace-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 259,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/grpc-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 694,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/grpc-patterns/go.ts",
+      "language": "typescript",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/grpc-patterns/index.ts",
+      "language": "typescript",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/grpc-patterns/java.ts",
+      "language": "typescript",
+      "sizeLines": 245,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/grpc-patterns/node.ts",
+      "language": "typescript",
+      "sizeLines": 334,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/grpc-patterns/proto.ts",
+      "language": "typescript",
+      "sizeLines": 148,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/grpc-patterns/python.ts",
+      "language": "typescript",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/grpc-patterns/types.ts",
+      "language": "typescript",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/http-patterns/go.ts",
+      "language": "typescript",
+      "sizeLines": 224,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/http-patterns/index.ts",
+      "language": "typescript",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/http-patterns/java.ts",
+      "language": "typescript",
+      "sizeLines": 862,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/http-patterns/kotlin.ts",
+      "language": "typescript",
+      "sizeLines": 564,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/http-patterns/node.ts",
+      "language": "typescript",
+      "sizeLines": 502,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/http-patterns/php.ts",
+      "language": "typescript",
+      "sizeLines": 201,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/http-patterns/python.ts",
+      "language": "typescript",
+      "sizeLines": 942,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/http-patterns/types.ts",
+      "language": "typescript",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/http-route-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 580,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/include-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 611,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/java-workspace-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 262,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/manifest-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 377,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/node-workspace-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 249,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/python-workspace-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 255,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/rust-workspace-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 294,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/thrift-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 388,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/thrift-patterns/index.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/thrift-patterns/java.ts",
+      "language": "typescript",
+      "sizeLines": 258,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/thrift-patterns/types.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/topic-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/topic-patterns/go.ts",
+      "language": "typescript",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/topic-patterns/index.ts",
+      "language": "typescript",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/topic-patterns/java.ts",
+      "language": "typescript",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/topic-patterns/node.ts",
+      "language": "typescript",
+      "sizeLines": 165,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/topic-patterns/python.ts",
+      "language": "typescript",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/topic-patterns/types.ts",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/tree-sitter-scanner.ts",
+      "language": "typescript",
+      "sizeLines": 194,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/extractors/workspace-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/group-path-utils.ts",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/matching.ts",
+      "language": "typescript",
+      "sizeLines": 327,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/normalization.ts",
+      "language": "typescript",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/resolve-at-member.ts",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/service-boundary-detector.ts",
+      "language": "typescript",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/service.ts",
+      "language": "typescript",
+      "sizeLines": 527,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/storage.ts",
+      "language": "typescript",
+      "sizeLines": 172,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/sync.ts",
+      "language": "typescript",
+      "sizeLines": 313,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/group/types.ts",
+      "language": "typescript",
+      "sizeLines": 201,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/incremental/shadow-candidates.ts",
+      "language": "typescript",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/incremental/subgraph-extract.ts",
+      "language": "typescript",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/ast-cache.ts",
+      "language": "typescript",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/binding-accumulator.ts",
+      "language": "typescript",
+      "sizeLines": 391,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/configs/c-cpp.ts",
+      "language": "typescript",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/configs/csharp.ts",
+      "language": "typescript",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/configs/dart.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/configs/go.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/configs/jvm.ts",
+      "language": "typescript",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/configs/php.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/configs/python.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/configs/ruby.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/configs/rust.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/configs/swift.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/configs/typescript-javascript.ts",
+      "language": "typescript",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-extractors/generic.ts",
+      "language": "typescript",
+      "sizeLines": 86,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-processor.ts",
+      "language": "typescript",
+      "sizeLines": 526,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-routing.ts",
+      "language": "typescript",
+      "sizeLines": 137,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/call-types.ts",
+      "language": "typescript",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/configs/c-cpp.ts",
+      "language": "typescript",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/configs/csharp.ts",
+      "language": "typescript",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/configs/dart.ts",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/configs/go.ts",
+      "language": "typescript",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/configs/jvm.ts",
+      "language": "typescript",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/configs/php.ts",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/configs/python.ts",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/configs/ruby.ts",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/configs/rust.ts",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/configs/swift.ts",
+      "language": "typescript",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/configs/typescript-javascript.ts",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-extractors/generic.ts",
+      "language": "typescript",
+      "sizeLines": 183,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/class-types.ts",
+      "language": "typescript",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/cluster-enricher.ts",
+      "language": "typescript",
+      "sizeLines": 238,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/cobol-processor.ts",
+      "language": "typescript",
+      "sizeLines": 1489,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/cobol/cobol-copy-expander.ts",
+      "language": "typescript",
+      "sizeLines": 510,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/cobol/cobol-preprocessor.ts",
+      "language": "typescript",
+      "sizeLines": 2313,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/cobol/jcl-parser.ts",
+      "language": "typescript",
+      "sizeLines": 269,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/cobol/jcl-processor.ts",
+      "language": "typescript",
+      "sizeLines": 274,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/community-processor.ts",
+      "language": "typescript",
+      "sizeLines": 464,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/constants.ts",
+      "language": "typescript",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/cpp-ue-preprocessor.ts",
+      "language": "typescript",
+      "sizeLines": 265,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/csharp-namespace-gate.ts",
+      "language": "typescript",
+      "sizeLines": 154,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/emit-references.ts",
+      "language": "typescript",
+      "sizeLines": 305,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/entry-point-scoring.ts",
+      "language": "typescript",
+      "sizeLines": 239,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/export-detection.ts",
+      "language": "typescript",
+      "sizeLines": 243,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/c-cpp.ts",
+      "language": "typescript",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/csharp.ts",
+      "language": "typescript",
+      "sizeLines": 130,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/dart.ts",
+      "language": "typescript",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/go.ts",
+      "language": "typescript",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/helpers.ts",
+      "language": "typescript",
+      "sizeLines": 174,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/jvm.ts",
+      "language": "typescript",
+      "sizeLines": 136,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/php.ts",
+      "language": "typescript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/python.ts",
+      "language": "typescript",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/ruby.ts",
+      "language": "typescript",
+      "sizeLines": 86,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/rust.ts",
+      "language": "typescript",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/swift.ts",
+      "language": "typescript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/configs/typescript-javascript.ts",
+      "language": "typescript",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/generic.ts",
+      "language": "typescript",
+      "sizeLines": 192,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-extractors/typescript.ts",
+      "language": "typescript",
+      "sizeLines": 303,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/field-types.ts",
+      "language": "typescript",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/filesystem-walker.ts",
+      "language": "typescript",
+      "sizeLines": 173,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/finalize-orchestrator.ts",
+      "language": "typescript",
+      "sizeLines": 204,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/framework-detection.ts",
+      "language": "typescript",
+      "sizeLines": 563,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/configs/c-cpp.ts",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/configs/csharp.ts",
+      "language": "typescript",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/configs/dart.ts",
+      "language": "typescript",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/configs/go.ts",
+      "language": "typescript",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/configs/jvm.ts",
+      "language": "typescript",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/configs/php.ts",
+      "language": "typescript",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/configs/python.ts",
+      "language": "typescript",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/configs/ruby.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/configs/rust.ts",
+      "language": "typescript",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/configs/swift.ts",
+      "language": "typescript",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/configs/typescript-javascript.ts",
+      "language": "typescript",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/csharp.ts",
+      "language": "typescript",
+      "sizeLines": 137,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/go.ts",
+      "language": "typescript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/jvm.ts",
+      "language": "typescript",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/php.ts",
+      "language": "typescript",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/python.ts",
+      "language": "typescript",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/resolver-factory.ts",
+      "language": "typescript",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/ruby.ts",
+      "language": "typescript",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/rust.ts",
+      "language": "typescript",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/standard.ts",
+      "language": "typescript",
+      "sizeLines": 219,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/types.ts",
+      "language": "typescript",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-resolvers/utils.ts",
+      "language": "typescript",
+      "sizeLines": 182,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/import-target-adapter.ts",
+      "language": "typescript",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/language-config.ts",
+      "language": "typescript",
+      "sizeLines": 484,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/language-provider.ts",
+      "language": "typescript",
+      "sizeLines": 513,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c-cpp.ts",
+      "language": "typescript",
+      "sizeLines": 518,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/arity-metadata.ts",
+      "language": "typescript",
+      "sizeLines": 102,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/arity.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/captures.ts",
+      "language": "typescript",
+      "sizeLines": 164,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/header-scan.ts",
+      "language": "typescript",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/import-decomposer.ts",
+      "language": "typescript",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/index.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/query.ts",
+      "language": "typescript",
+      "sizeLines": 180,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/c/static-linkage.ts",
+      "language": "typescript",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cobol.ts",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cobol/captures.ts",
+      "language": "typescript",
+      "sizeLines": 321,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cobol/index.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cobol/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 99,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cobol/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/adl.ts",
+      "language": "typescript",
+      "sizeLines": 798,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/arity-metadata.ts",
+      "language": "typescript",
+      "sizeLines": 240,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/arity.ts",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/captures.ts",
+      "language": "typescript",
+      "sizeLines": 1742,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/constraint-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 335,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/constraint-filter.ts",
+      "language": "typescript",
+      "sizeLines": 261,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/conversion-rank.ts",
+      "language": "typescript",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/file-local-linkage.ts",
+      "language": "typescript",
+      "sizeLines": 302,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/header-scan.ts",
+      "language": "typescript",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/import-decomposer.ts",
+      "language": "typescript",
+      "sizeLines": 120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/index.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/inline-namespaces.ts",
+      "language": "typescript",
+      "sizeLines": 203,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/query.ts",
+      "language": "typescript",
+      "sizeLines": 608,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/range-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 272,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 303,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/two-phase-lookup.ts",
+      "language": "typescript",
+      "sizeLines": 327,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/type-classifier.ts",
+      "language": "typescript",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/cpp/user-defined-conversions.ts",
+      "language": "typescript",
+      "sizeLines": 140,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp.ts",
+      "language": "typescript",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/accessor-unwrap.ts",
+      "language": "typescript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/arity-metadata.ts",
+      "language": "typescript",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/arity.ts",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/cache-stats.ts",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/captures.ts",
+      "language": "typescript",
+      "sizeLines": 585,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/import-decomposer.ts",
+      "language": "typescript",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 200,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/index.ts",
+      "language": "typescript",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 148,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/namespace-siblings.ts",
+      "language": "typescript",
+      "sizeLines": 777,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/qualified-type-names.ts",
+      "language": "typescript",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/query.ts",
+      "language": "typescript",
+      "sizeLines": 539,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/receiver-binding.ts",
+      "language": "typescript",
+      "sizeLines": 146,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/resolution-config.ts",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/csharp/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 96,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart.ts",
+      "language": "typescript",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/arity-metadata.ts",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/arity.ts",
+      "language": "typescript",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/built-ins.ts",
+      "language": "typescript",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/cache-stats.ts",
+      "language": "typescript",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/captures.ts",
+      "language": "typescript",
+      "sizeLines": 497,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/expand-wildcards.ts",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/index.ts",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/query.ts",
+      "language": "typescript",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/receiver-binding.ts",
+      "language": "typescript",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 225,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/signature-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/dart/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go.ts",
+      "language": "typescript",
+      "sizeLines": 152,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/arity-metadata.ts",
+      "language": "typescript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/arity.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/cache-stats.ts",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/captures.ts",
+      "language": "typescript",
+      "sizeLines": 400,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/expand-wildcards.ts",
+      "language": "typescript",
+      "sizeLines": 99,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/import-decomposer.ts",
+      "language": "typescript",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/index.ts",
+      "language": "typescript",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/interface-impls.ts",
+      "language": "typescript",
+      "sizeLines": 626,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 137,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/method-owners.ts",
+      "language": "typescript",
+      "sizeLines": 120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/namespace-mirror.ts",
+      "language": "typescript",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/package-siblings.ts",
+      "language": "typescript",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/query.ts",
+      "language": "typescript",
+      "sizeLines": 215,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/range-binding.ts",
+      "language": "typescript",
+      "sizeLines": 152,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/receiver-binding.ts",
+      "language": "typescript",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/go/type-binding.ts",
+      "language": "typescript",
+      "sizeLines": 331,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/index.ts",
+      "language": "typescript",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java.ts",
+      "language": "typescript",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/arity-metadata.ts",
+      "language": "typescript",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/arity.ts",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/cache-stats.ts",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/captures.ts",
+      "language": "typescript",
+      "sizeLines": 586,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/import-decomposer.ts",
+      "language": "typescript",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/index.ts",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 148,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/package-siblings.ts",
+      "language": "typescript",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/query.ts",
+      "language": "typescript",
+      "sizeLines": 287,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/receiver-binding.ts",
+      "language": "typescript",
+      "sizeLines": 103,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 213,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/java/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/javascript/arity.ts",
+      "language": "typescript",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/javascript/captures.ts",
+      "language": "typescript",
+      "sizeLines": 945,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/javascript/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/javascript/index.ts",
+      "language": "typescript",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/javascript/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/javascript/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/javascript/query.ts",
+      "language": "typescript",
+      "sizeLines": 536,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/javascript/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/javascript/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin.ts",
+      "language": "typescript",
+      "sizeLines": 185,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/arity-metadata.ts",
+      "language": "typescript",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/arity.ts",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/cache-stats.ts",
+      "language": "typescript",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/captures.ts",
+      "language": "typescript",
+      "sizeLines": 1209,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/companion-scopes.ts",
+      "language": "typescript",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/import-decomposer.ts",
+      "language": "typescript",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/index.ts",
+      "language": "typescript",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/owners.ts",
+      "language": "typescript",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/query.ts",
+      "language": "typescript",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/receiver-binding.ts",
+      "language": "typescript",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 188,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/kotlin/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php.ts",
+      "language": "typescript",
+      "sizeLines": 312,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/arity-metadata.ts",
+      "language": "typescript",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/arity.ts",
+      "language": "typescript",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/cache-stats.ts",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/captures.ts",
+      "language": "typescript",
+      "sizeLines": 926,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/import-decomposer.ts",
+      "language": "typescript",
+      "sizeLines": 264,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 140,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/index.ts",
+      "language": "typescript",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 250,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/namespace-siblings.ts",
+      "language": "typescript",
+      "sizeLines": 402,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/query.ts",
+      "language": "typescript",
+      "sizeLines": 337,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/receiver-binding.ts",
+      "language": "typescript",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 421,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/php/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python.ts",
+      "language": "typescript",
+      "sizeLines": 148,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/arity-metadata.ts",
+      "language": "typescript",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/arity.ts",
+      "language": "typescript",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/cache-stats.ts",
+      "language": "typescript",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/captures.ts",
+      "language": "typescript",
+      "sizeLines": 273,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/depends-references.ts",
+      "language": "typescript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/import-decomposer.ts",
+      "language": "typescript",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 343,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/index-stats.ts",
+      "language": "typescript",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/index.ts",
+      "language": "typescript",
+      "sizeLines": 86,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 193,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/query.ts",
+      "language": "typescript",
+      "sizeLines": 289,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/receiver-binding.ts",
+      "language": "typescript",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/python/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby.ts",
+      "language": "typescript",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby/arity.ts",
+      "language": "typescript",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby/cache-stats.ts",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby/captures.ts",
+      "language": "typescript",
+      "sizeLines": 748,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby/index.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby/query.ts",
+      "language": "typescript",
+      "sizeLines": 231,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby/receiver-binding.ts",
+      "language": "typescript",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 288,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/ruby/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust.ts",
+      "language": "typescript",
+      "sizeLines": 187,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/arity.ts",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/cache-stats.ts",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/captures.ts",
+      "language": "typescript",
+      "sizeLines": 304,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/import-decomposer.ts",
+      "language": "typescript",
+      "sizeLines": 207,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/index.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 166,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/method-owners.ts",
+      "language": "typescript",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/query.ts",
+      "language": "typescript",
+      "sizeLines": 189,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/range-binding.ts",
+      "language": "typescript",
+      "sizeLines": 741,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/receiver-binding.ts",
+      "language": "typescript",
+      "sizeLines": 148,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/rust/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift.ts",
+      "language": "typescript",
+      "sizeLines": 257,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/arity-metadata.ts",
+      "language": "typescript",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/arity.ts",
+      "language": "typescript",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/base-type.ts",
+      "language": "typescript",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/cache-stats.ts",
+      "language": "typescript",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/captures.ts",
+      "language": "typescript",
+      "sizeLines": 547,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/implicit-imports.ts",
+      "language": "typescript",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/import-decomposer.ts",
+      "language": "typescript",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 103,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/index.ts",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/query.ts",
+      "language": "typescript",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/receiver-binding.ts",
+      "language": "typescript",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 227,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/sibling-type-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/signature-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/target-grouping.ts",
+      "language": "typescript",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/swift/target-siblings.ts",
+      "language": "typescript",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript.ts",
+      "language": "typescript",
+      "sizeLines": 422,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/arity-metadata.ts",
+      "language": "typescript",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/arity.ts",
+      "language": "typescript",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/array-callback.ts",
+      "language": "typescript",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/cache-stats.ts",
+      "language": "typescript",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/captures.ts",
+      "language": "typescript",
+      "sizeLines": 752,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/import-decomposer.ts",
+      "language": "typescript",
+      "sizeLines": 438,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/index.ts",
+      "language": "typescript",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/interpret.ts",
+      "language": "typescript",
+      "sizeLines": 312,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/merge-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 168,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/query.ts",
+      "language": "typescript",
+      "sizeLines": 1112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/receiver-binding.ts",
+      "language": "typescript",
+      "sizeLines": 185,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 153,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/typescript/simple-hooks.ts",
+      "language": "typescript",
+      "sizeLines": 165,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/vue.ts",
+      "language": "typescript",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/vue/captures.ts",
+      "language": "typescript",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/vue/import-target.ts",
+      "language": "typescript",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/vue/index.ts",
+      "language": "typescript",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/languages/vue/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 324,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/markdown-processor.ts",
+      "language": "typescript",
+      "sizeLines": 166,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/configs/c-cpp.ts",
+      "language": "typescript",
+      "sizeLines": 425,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/configs/csharp.ts",
+      "language": "typescript",
+      "sizeLines": 321,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/configs/dart.ts",
+      "language": "typescript",
+      "sizeLines": 424,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/configs/go.ts",
+      "language": "typescript",
+      "sizeLines": 195,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/configs/jvm.ts",
+      "language": "typescript",
+      "sizeLines": 362,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/configs/php.ts",
+      "language": "typescript",
+      "sizeLines": 325,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/configs/python.ts",
+      "language": "typescript",
+      "sizeLines": 325,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/configs/ruby.ts",
+      "language": "typescript",
+      "sizeLines": 304,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/configs/rust.ts",
+      "language": "typescript",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/configs/swift.ts",
+      "language": "typescript",
+      "sizeLines": 310,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/configs/typescript-javascript.ts",
+      "language": "typescript",
+      "sizeLines": 351,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-extractors/generic.ts",
+      "language": "typescript",
+      "sizeLines": 259,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/method-types.ts",
+      "language": "typescript",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/model/field-registry.ts",
+      "language": "typescript",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/model/index.ts",
+      "language": "typescript",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/model/method-registry.ts",
+      "language": "typescript",
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/model/owned-members-lookup.ts",
+      "language": "typescript",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/model/registration-table.ts",
+      "language": "typescript",
+      "sizeLines": 333,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/model/resolve.ts",
+      "language": "typescript",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/model/scope-resolution-indexes.ts",
+      "language": "typescript",
+      "sizeLines": 142,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/model/semantic-model.ts",
+      "language": "typescript",
+      "sizeLines": 271,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/model/symbol-table.ts",
+      "language": "typescript",
+      "sizeLines": 370,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/model/type-registry.ts",
+      "language": "typescript",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/mro-processor.ts",
+      "language": "typescript",
+      "sizeLines": 768,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/parsing-processor.ts",
+      "language": "typescript",
+      "sizeLines": 1120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/cobol.ts",
+      "language": "typescript",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/communities.ts",
+      "language": "typescript",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/cross-file.ts",
+      "language": "typescript",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/index.ts",
+      "language": "typescript",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/markdown.ts",
+      "language": "typescript",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/mro.ts",
+      "language": "typescript",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/orm-extraction.ts",
+      "language": "typescript",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/orm.ts",
+      "language": "typescript",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/parse-impl.ts",
+      "language": "typescript",
+      "sizeLines": 1027,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/parse.ts",
+      "language": "typescript",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/processes.ts",
+      "language": "typescript",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/routes.ts",
+      "language": "typescript",
+      "sizeLines": 411,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/runner.ts",
+      "language": "typescript",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/scan.ts",
+      "language": "typescript",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/structure.ts",
+      "language": "typescript",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/tools.ts",
+      "language": "typescript",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline-phases/types.ts",
+      "language": "typescript",
+      "sizeLines": 101,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/pipeline.ts",
+      "language": "typescript",
+      "sizeLines": 219,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/process-processor.ts",
+      "language": "typescript",
+      "sizeLines": 466,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/resolve-references.ts",
+      "language": "typescript",
+      "sizeLines": 256,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/route-extractors/expo.ts",
+      "language": "typescript",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/route-extractors/fastapi-router-bindings.ts",
+      "language": "typescript",
+      "sizeLines": 275,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/route-extractors/laravel.ts",
+      "language": "typescript",
+      "sizeLines": 600,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/route-extractors/middleware.ts",
+      "language": "typescript",
+      "sizeLines": 198,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/route-extractors/nextjs.ts",
+      "language": "typescript",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/route-extractors/php.ts",
+      "language": "typescript",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/route-extractors/response-shapes.ts",
+      "language": "typescript",
+      "sizeLines": 303,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-extractor-bridge.ts",
+      "language": "typescript",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 1190,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/contract/scope-resolver.ts",
+      "language": "typescript",
+      "sizeLines": 1010,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/graph-bridge/edges.ts",
+      "language": "typescript",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/graph-bridge/ids.ts",
+      "language": "typescript",
+      "sizeLines": 260,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/graph-bridge/imports-to-edges.ts",
+      "language": "typescript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/graph-bridge/method-dispatch.ts",
+      "language": "typescript",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/graph-bridge/node-lookup.ts",
+      "language": "typescript",
+      "sizeLines": 193,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/graph-bridge/references-to-edges.ts",
+      "language": "typescript",
+      "sizeLines": 99,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/passes/compound-receiver.ts",
+      "language": "typescript",
+      "sizeLines": 568,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/passes/free-call-fallback.ts",
+      "language": "typescript",
+      "sizeLines": 793,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/passes/imported-return-types.ts",
+      "language": "typescript",
+      "sizeLines": 238,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/passes/mro.ts",
+      "language": "typescript",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/passes/overload-narrowing.ts",
+      "language": "typescript",
+      "sizeLines": 508,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/passes/receiver-bound-calls.ts",
+      "language": "typescript",
+      "sizeLines": 1108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/pipeline/phase.ts",
+      "language": "typescript",
+      "sizeLines": 358,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/pipeline/reconcile-ownership.ts",
+      "language": "typescript",
+      "sizeLines": 193,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/pipeline/registry.ts",
+      "language": "typescript",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/pipeline/run.ts",
+      "language": "typescript",
+      "sizeLines": 620,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/pipeline/validate-bindings-immutability.ts",
+      "language": "typescript",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/resolution-outcome.ts",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/scope/namespace-targets.ts",
+      "language": "typescript",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/scope/walkers.ts",
+      "language": "typescript",
+      "sizeLines": 1084,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/scope-resolution/workspace-index.ts",
+      "language": "typescript",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/structure-processor.ts",
+      "language": "typescript",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/tree-sitter-queries.ts",
+      "language": "typescript",
+      "sizeLines": 1649,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/ts-js-hoc-utils.ts",
+      "language": "typescript",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-env.ts",
+      "language": "typescript",
+      "sizeLines": 1361,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/c-cpp.ts",
+      "language": "typescript",
+      "sizeLines": 557,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/csharp.ts",
+      "language": "typescript",
+      "sizeLines": 574,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/dart.ts",
+      "language": "typescript",
+      "sizeLines": 415,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/go.ts",
+      "language": "typescript",
+      "sizeLines": 514,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/jvm.ts",
+      "language": "typescript",
+      "sizeLines": 879,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/php.ts",
+      "language": "typescript",
+      "sizeLines": 555,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/python.ts",
+      "language": "typescript",
+      "sizeLines": 503,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/ruby.ts",
+      "language": "typescript",
+      "sizeLines": 424,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/rust.ts",
+      "language": "typescript",
+      "sizeLines": 518,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/shared.ts",
+      "language": "typescript",
+      "sizeLines": 882,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/swift.ts",
+      "language": "typescript",
+      "sizeLines": 523,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/types.ts",
+      "language": "typescript",
+      "sizeLines": 184,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/type-extractors/typescript.ts",
+      "language": "typescript",
+      "sizeLines": 709,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/ast-helpers.ts",
+      "language": "typescript",
+      "sizeLines": 955,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/call-analysis.ts",
+      "language": "typescript",
+      "sizeLines": 660,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/callable-labels.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/deferred-resolution-profile.ts",
+      "language": "typescript",
+      "sizeLines": 151,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/env.ts",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/event-loop.ts",
+      "language": "typescript",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/graph-sort.ts",
+      "language": "typescript",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/heritage-marker.ts",
+      "language": "typescript",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/max-file-size.ts",
+      "language": "typescript",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/method-props.ts",
+      "language": "typescript",
+      "sizeLines": 218,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/qualified-name.ts",
+      "language": "typescript",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/template-arguments.ts",
+      "language": "typescript",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/utils/verbose.ts",
+      "language": "typescript",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/configs/c-cpp.ts",
+      "language": "typescript",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/configs/csharp.ts",
+      "language": "typescript",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/configs/dart.ts",
+      "language": "typescript",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/configs/go.ts",
+      "language": "typescript",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/configs/jvm.ts",
+      "language": "typescript",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/configs/php.ts",
+      "language": "typescript",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/configs/python.ts",
+      "language": "typescript",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/configs/ruby.ts",
+      "language": "typescript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/configs/rust.ts",
+      "language": "typescript",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/configs/swift.ts",
+      "language": "typescript",
+      "sizeLines": 99,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/configs/typescript-javascript.ts",
+      "language": "typescript",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-extractors/generic.ts",
+      "language": "typescript",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/variable-types.ts",
+      "language": "typescript",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/vue-sfc-extractor.ts",
+      "language": "typescript",
+      "sizeLines": 621,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/workers/parse-worker.ts",
+      "language": "typescript",
+      "sizeLines": 2314,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/workers/quarantine.ts",
+      "language": "typescript",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/ingestion/workers/worker-pool.ts",
+      "language": "typescript",
+      "sizeLines": 1903,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/lbug/csv-generator.ts",
+      "language": "typescript",
+      "sizeLines": 564,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/lbug/extension-loader.ts",
+      "language": "typescript",
+      "sizeLines": 290,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/lbug/lbug-adapter.ts",
+      "language": "typescript",
+      "sizeLines": 2022,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/lbug/lbug-config.ts",
+      "language": "typescript",
+      "sizeLines": 610,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/lbug/native-check.ts",
+      "language": "typescript",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/lbug/pool-adapter.ts",
+      "language": "typescript",
+      "sizeLines": 805,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/lbug/query-params.ts",
+      "language": "typescript",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/lbug/schema.ts",
+      "language": "typescript",
+      "sizeLines": 528,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/lbug/sidecar-recovery.ts",
+      "language": "typescript",
+      "sizeLines": 353,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/lbug/wal-checkpoint-driver.ts",
+      "language": "typescript",
+      "sizeLines": 232,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/logger.ts",
+      "language": "typescript",
+      "sizeLines": 375,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/platform/capabilities.ts",
+      "language": "typescript",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/run-analyze.ts",
+      "language": "typescript",
+      "sizeLines": 1079,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/search/bm25-index.ts",
+      "language": "typescript",
+      "sizeLines": 147,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/search/fts-indexes.ts",
+      "language": "typescript",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/search/fts-schema.ts",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/search/hybrid-search.ts",
+      "language": "typescript",
+      "sizeLines": 184,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/search/phase-timer.ts",
+      "language": "typescript",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/tree-sitter/parser-loader.ts",
+      "language": "typescript",
+      "sizeLines": 281,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/tree-sitter/safe-parse.ts",
+      "language": "typescript",
+      "sizeLines": 269,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/wiki/cursor-client.ts",
+      "language": "typescript",
+      "sizeLines": 164,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/wiki/generator.ts",
+      "language": "typescript",
+      "sizeLines": 1404,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/wiki/graph-queries.ts",
+      "language": "typescript",
+      "sizeLines": 345,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/wiki/html-viewer.ts",
+      "language": "typescript",
+      "sizeLines": 339,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/wiki/llm-client.ts",
+      "language": "typescript",
+      "sizeLines": 407,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/wiki/local-cli-client.ts",
+      "language": "typescript",
+      "sizeLines": 446,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/wiki/mermaid-sanitizer.ts",
+      "language": "typescript",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/core/wiki/prompts.ts",
+      "language": "typescript",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/lib/utils.ts",
+      "language": "typescript",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/mcp/compatible-stdio-transport.ts",
+      "language": "typescript",
+      "sizeLines": 278,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/mcp/core/embedder.ts",
+      "language": "typescript",
+      "sizeLines": 189,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/mcp/core/lbug-adapter.ts",
+      "language": "typescript",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/mcp/local/local-backend.ts",
+      "language": "typescript",
+      "sizeLines": 4389,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/mcp/resources.ts",
+      "language": "typescript",
+      "sizeLines": 619,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/mcp/server.ts",
+      "language": "typescript",
+      "sizeLines": 407,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/mcp/staleness.ts",
+      "language": "typescript",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/mcp/stdio-capture.ts",
+      "language": "typescript",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/mcp/stdio-context.ts",
+      "language": "typescript",
+      "sizeLines": 183,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/mcp/tools.ts",
+      "language": "typescript",
+      "sizeLines": 585,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/server/analyze-job.ts",
+      "language": "typescript",
+      "sizeLines": 201,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/server/analyze-worker.ts",
+      "language": "typescript",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/server/api.ts",
+      "language": "typescript",
+      "sizeLines": 2057,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/server/git-clone.ts",
+      "language": "typescript",
+      "sizeLines": 459,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/server/git-history.ts",
+      "language": "typescript",
+      "sizeLines": 202,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/server/mcp-http.ts",
+      "language": "typescript",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/server/shadow-git.ts",
+      "language": "typescript",
+      "sizeLines": 189,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/server/validation.ts",
+      "language": "typescript",
+      "sizeLines": 164,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/storage/file-hash.ts",
+      "language": "typescript",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/storage/git.ts",
+      "language": "typescript",
+      "sizeLines": 396,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/storage/parse-cache.ts",
+      "language": "typescript",
+      "sizeLines": 305,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/storage/repo-manager.ts",
+      "language": "typescript",
+      "sizeLines": 1056,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/src/types/pipeline.ts",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gitnexus/tsconfig.json",
+      "language": "json",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gitnexus/vitest.config.ts",
+      "language": "typescript",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "llms.txt",
+      "language": "txt",
+      "sizeLines": 20,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mock-phase2.js",
+      "language": "javascript",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "scripts/build-gitnexus.ps1",
+      "language": "powershell",
+      "sizeLines": 133,
+      "fileCategory": "script"
+    },
+    {
+      "path": "scripts/start-gitnexus.ps1",
+      "language": "powershell",
+      "sizeLines": 123,
+      "fileCategory": "script"
+    },
+    {
+      "path": "skills.mdm",
+      "language": "mdm",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "start-gitnexus.cmd",
+      "language": "batch",
+      "sizeLines": 4,
+      "fileCategory": "script"
+    }
+  ],
+  "totalFiles": 836,
+  "filteredByIgnore": 2727,
+  "estimatedComplexity": "very-large",
+  "stats": {
+    "filesScanned": 836,
+    "byCategory": {
+      "config": 45,
+      "code": 771,
+      "infra": 6,
+      "script": 8,
+      "markup": 3,
+      "docs": 3
+    },
+    "byLanguage": {
+      "json": 44,
+      "unknown": 9,
+      "toml": 1,
+      "batch": 2,
+      "yaml": 2,
+      "javascript": 24,
+      "dockerfile": 3,
+      "powershell": 4,
+      "typescript": 738,
+      "html": 2,
+      "css": 1,
+      "txt": 3,
+      "shell": 2,
+      "mdm": 1
+    }
+  }
+}

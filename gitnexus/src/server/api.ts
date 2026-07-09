@@ -12,6 +12,8 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import fs from 'fs/promises';
+import chokidar from 'chokidar';
+import { commitShadowChange, initShadowGit } from './shadow-git.js';
 import { createRequire } from 'node:module';
 import { loadMeta, listRegisteredRepos, getStoragePath } from '../storage/repo-manager.js';
 import {
@@ -35,6 +37,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { JobManager } from './analyze-job.js';
 import { assertString, escapeRegExp, BadRequestError, createRouteLimiter } from './validation.js';
 import { extractRepoName, getCloneDir, cloneOrPull } from './git-clone.js';
+import { getFileHistory, getFileVersion, getFileDiff } from './git-history.js';
 import { logger, flushLoggerSync } from '../core/logger.js';
 
 const _require = createRequire(import.meta.url);
@@ -714,6 +717,52 @@ export const createServer = async (port: number, host: string = '127.0.0.1') => 
   );
   app.use(express.json({ limit: '10mb' }));
 
+  // Initialize Shadow Git file watchers for all registered repos
+  try {
+    const repos = await listRegisteredRepos();
+    for (const repo of repos) {
+      if (repo.path) {
+        try {
+          await initShadowGit(repo.path);
+        } catch (err: any) {
+          logger.error(`Failed to initialize shadow git for ${repo.path}: ${err.message}`);
+        }
+        const watcher = chokidar.watch(repo.path, {
+          ignored: [/(^|[\/\\])\../, '**/node_modules/**', '**/.gitnexus/**'], // ignore dotfiles, node_modules, and gitnexus cache
+          persistent: true,
+          ignoreInitial: true,
+        });
+
+        let debounceTimer: NodeJS.Timeout | null = null;
+        const changedFiles = new Set<string>();
+
+        watcher.on('all', (event, filePath) => {
+          if (event === 'add' || event === 'change') {
+            changedFiles.add(filePath);
+            if (debounceTimer) clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+              for (const file of changedFiles) {
+                // file is an absolute path. The shadow commit function expects relative path.
+                // But commitShadowChange actually uses assertContainedRelPath to get rel.
+                // Let's just pass the absolute path and let it resolve.
+                commitShadowChange(
+                  repo.path,
+                  file,
+                  `Auto-snapshot: modified ${path.basename(file)}`,
+                ).catch((err) => logger.warn(`Shadow commit failed for ${file}: ${err}`));
+              }
+              changedFiles.clear();
+            }, 2000);
+          }
+        });
+
+        logger.info(`Started Shadow Git file watcher for ${repo.path}`);
+      }
+    }
+  } catch (e) {
+    logger.warn('Failed to initialize shadow git watchers: ' + e);
+  }
+
   // No explicit OPTIONS route is registered. The Chromium Private Network
   // Access header is set by the global middleware above (pre-cors), and
   // `cors()` itself handles OPTIONS preflights for every path. Registering a
@@ -1072,6 +1121,62 @@ export const createServer = async (port: number, host: string = '127.0.0.1') => 
     }
   });
 
+  // Domain graph (LLM-generated business-domain view). Persisted as a JSON
+  // sidecar in the repo's storage dir. The graph is generated client-side
+  // (browser LLM) and cached here so it survives reloads and repo switches.
+  const domainGraphPath = (entry: any): string => path.join(entry.storagePath, 'domain-graph.json');
+
+  app.get('/api/domain-graph', createRouteLimiter(), async (req, res) => {
+    try {
+      const entry = await resolveRepo(requestedRepo(req));
+      if (!entry) {
+        res.status(404).json({ error: 'Repository not found' });
+        return;
+      }
+      let raw: string;
+      try {
+        raw = await fs.readFile(domainGraphPath(entry), 'utf-8');
+      } catch (readErr: any) {
+        if (readErr?.code === 'ENOENT') {
+          res.status(404).json({ error: 'No domain graph cached' });
+          return;
+        }
+        throw readErr;
+      }
+      res.type('application/json').send(raw);
+    } catch (err: any) {
+      res
+        .status(statusFromError(err))
+        .json({ error: err.message || 'Failed to read domain graph' });
+    }
+  });
+
+  app.post('/api/domain-graph', createRouteLimiter(), async (req, res) => {
+    try {
+      const entry = await resolveRepo(requestedRepo(req));
+      if (!entry) {
+        res.status(404).json({ error: 'Repository not found' });
+        return;
+      }
+      const body = req.body;
+      if (
+        !body ||
+        typeof body !== 'object' ||
+        !Array.isArray(body.nodes) ||
+        !Array.isArray(body.edges)
+      ) {
+        res.status(400).json({ error: 'Invalid domain graph: expected { nodes: [], edges: [] }' });
+        return;
+      }
+      await fs.writeFile(domainGraphPath(entry), JSON.stringify(body), 'utf-8');
+      res.json({ saved: true, nodes: body.nodes.length, edges: body.edges.length });
+    } catch (err: any) {
+      res
+        .status(statusFromError(err))
+        .json({ error: err.message || 'Failed to save domain graph' });
+    }
+  });
+
   // Execute Cypher query
   app.post('/api/query', async (req, res) => {
     await handleQueryRequest(req, res, resolveRepo);
@@ -1248,6 +1353,66 @@ export const createServer = async (port: number, host: string = '127.0.0.1') => 
       return;
     }
     await handleFileRequest(req, res, entry.path);
+  });
+
+  // ── Single-file git history / version / diff ───────────────────────────
+  // Each spawns a git subprocess in the repo working tree; rate-limited like
+  // the other FS-touching routes (CodeQL js/missing-rate-limiting).
+
+  // Commit history for a file (follows renames).
+  app.get('/api/file/history', createRouteLimiter(), async (req, res) => {
+    try {
+      const entry = await resolveRepo(requestedRepo(req));
+      if (!entry) {
+        res.status(404).json({ error: 'Repository not found' });
+        return;
+      }
+      const filePath = assertString(req.query.path, 'path');
+      const limit = req.query.limit !== undefined ? Number(req.query.limit) : 100;
+      const commits = await getFileHistory(entry.path, filePath, limit);
+      res.json({ commits });
+    } catch (err: any) {
+      res
+        .status(statusFromError(err))
+        .json({ error: err.message || 'Failed to read file history' });
+    }
+  });
+
+  // File content at a specific commit/ref.
+  app.get('/api/file/version', createRouteLimiter(), async (req, res) => {
+    try {
+      const entry = await resolveRepo(requestedRepo(req));
+      if (!entry) {
+        res.status(404).json({ error: 'Repository not found' });
+        return;
+      }
+      const filePath = assertString(req.query.path, 'path');
+      const ref = assertString(req.query.ref, 'ref');
+      const content = await getFileVersion(entry.path, filePath, ref);
+      res.json({ content, ref });
+    } catch (err: any) {
+      res
+        .status(statusFromError(err))
+        .json({ error: err.message || 'Failed to read file version' });
+    }
+  });
+
+  // Unified diff of a file between two refs.
+  app.get('/api/file/diff', createRouteLimiter(), async (req, res) => {
+    try {
+      const entry = await resolveRepo(requestedRepo(req));
+      if (!entry) {
+        res.status(404).json({ error: 'Repository not found' });
+        return;
+      }
+      const filePath = assertString(req.query.path, 'path');
+      const from = assertString(req.query.from, 'from');
+      const to = assertString(req.query.to, 'to');
+      const diff = await getFileDiff(entry.path, filePath, from, to);
+      res.json({ diff, from, to });
+    } catch (err: any) {
+      res.status(statusFromError(err)).json({ error: err.message || 'Failed to diff file' });
+    }
   });
 
   // Grep — regex search across file contents in the indexed repo

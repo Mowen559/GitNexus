@@ -1,0 +1,72 @@
+# .understandignore — patterns for files/dirs to exclude from analysis
+# Syntax: same as .gitignore (globs, # comments, ! negation, trailing / for dirs)
+# Lines below are suggestions — uncomment to activate.
+# Use ! prefix to force-include something excluded by defaults.
+#
+# Built-in defaults (always excluded unless negated):
+#   node_modules/, .git/, dist/, build/, obj/, *.lock, *.min.js, etc.
+#
+# --- From .gitignore (uncomment to exclude) ---
+
+# *.tsbuildinfo
+# *.swp
+# *.swo
+# .DS_Store
+# Thumbs.db
+# .claude/settings.local.json
+# .env
+# .env.local
+# .env.*.local
+# docker/.env
+# npm-debug.log*
+# *.local
+# HANDOFF.md
+# HANDOFF*.md
+# .vercel
+# .env*.local
+# .gitnexus
+# .claude/settings.local.json
+# .claude/worktrees/
+# .claude/skills/generated/
+# assets/
+# repomix-output*
+# gitnexus-web/playwright-report/
+# gitnexus-web/test-results/
+# eval/.coverage
+# eval/.hypothesis/
+# docs/
+# gitnexus/test/fixtures/mini-repo/*.md
+# gitnexus/test/fixtures/mini-repo/.claude
+# gitnexus/test/fixtures/mini-repo/.gitignore
+# gitnexus/test/fixtures/lang-resolution/**/obj
+# gitnexus/test/fixtures/lang-resolution/**/bin
+# GitNexus.sln
+# .worktrees/
+# gitnexus/vendor/**/build/
+# gitnexus/vendor/**/node_modules/
+# /github/scripts/triage/__pycache__/
+# .claude-flow/
+# .claude/agents/*
+# !.claude/agents/gitnexus-*.md
+# .claude/commands/
+# .claude/helpers
+# .claude/skills/*
+# !.claude/skills/gitnexus/
+# !.claude/skills/gitnexus-pr-swarm-review/
+# .history/
+# .swarm/
+# local_docs/
+# .tmp/
+# .agents/
+# .context/
+# gitnexus/web/
+
+# --- Detected directories (uncomment to exclude) ---
+
+# scripts/
+
+# --- Test file patterns (uncomment to exclude) ---
+
+# *.test.*
+# *.spec.*
+# *.snap

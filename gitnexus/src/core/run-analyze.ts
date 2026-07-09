@@ -201,6 +201,8 @@ export const PHASE_LABELS: Record<string, string> = {
   done: 'Done',
 };
 
+import { initShadowGit } from '../server/shadow-git.js';
+
 // ---------------------------------------------------------------------------
 // Main orchestrator
 // ---------------------------------------------------------------------------
@@ -224,6 +226,9 @@ export async function runFullAnalysis(
   const log = (msg: string) => callbacks.onLog?.(msg);
   const progress = (phase: string, percent: number, message: string) =>
     callbacks.onProgress(phase, percent, message);
+
+  // Initialize Shadow Git for AI snapshots
+  await initShadowGit(repoPath);
 
   // Scope the degraded-parse log throttle to this run. On a reused process
   // (e.g. tests, or any host that calls runFullAnalysis more than once) the

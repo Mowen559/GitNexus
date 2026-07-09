@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AppStateProvider, useAppState } from './hooks/useAppState';
+import { UAFeaturesProvider } from './hooks/useUAFeatures';
 import { DropZone } from './components/DropZone';
 import { LoadingOverlay } from './components/LoadingOverlay';
 import { Header } from './components/Header';
@@ -9,6 +10,9 @@ import { SettingsPanel } from './components/SettingsPanel';
 import { StatusBar } from './components/StatusBar';
 import { FileTreePanel } from './components/FileTreePanel';
 import { CodeReferencesPanel } from './components/CodeReferencesPanel';
+import UAToolbar from './components/UAToolbar';
+import MobileLayout from './components/MobileLayout';
+import { useIsMobile } from './hooks/useIsMobile';
 import { getActiveProviderConfig } from './core/llm/settings-service';
 import { createKnowledgeGraph } from './core/graph/graph';
 import {
@@ -52,6 +56,7 @@ const AppContent = () => {
 
   const graphCanvasRef = useRef<GraphCanvasHandle>(null);
   const [serverDisconnected, setServerDisconnected] = useState(false);
+  const isMobile = useIsMobile();
 
   const handleServerConnect = useCallback(
     async (result: ConnectResult): Promise<void> => {
@@ -243,6 +248,17 @@ const AppContent = () => {
     return <LoadingOverlay progress={progress} />;
   }
 
+  // Mobile exploring view — narrow viewports get a tabbed single-column layout.
+  if (isMobile) {
+    return (
+      <MobileLayout
+        graphCanvasRef={graphCanvasRef}
+        availableRepos={availableRepos}
+        onSwitchRepo={switchRepo}
+      />
+    );
+  }
+
   // Exploring view
   return (
     <div className="flex h-screen flex-col overflow-hidden bg-void">
@@ -290,6 +306,9 @@ const AppContent = () => {
         <div className="relative min-w-0 flex-1">
           <GraphCanvas ref={graphCanvasRef} />
 
+          {/* UA feature toolbar (Filter / Export / Path / Details / Tour) */}
+          <UAToolbar />
+
           {/* Code References Panel (overlay) - does NOT resize the graph, it overlaps on top */}
           {isCodePanelOpen && (codeReferences.length > 0 || !!selectedNode) && (
             <div className="pointer-events-auto absolute inset-y-0 left-0 z-30">
@@ -323,7 +342,9 @@ const AppContent = () => {
 function App() {
   return (
     <AppStateProvider>
-      <AppContent />
+      <UAFeaturesProvider>
+        <AppContent />
+      </UAFeaturesProvider>
     </AppStateProvider>
   );
 }

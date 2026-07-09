@@ -1,6 +1,7 @@
 import Graph, { MultiGraph } from 'graphology';
 import type { NodeLabel } from 'gitnexus-shared';
 import type { KnowledgeGraph } from '../core/graph/types';
+import type { UADomainGraph } from '../core/graph/ua-model';
 import { EDGE_INFO, NODE_COLORS, NODE_SIZES, getCommunityColor } from './constants';
 import { calculateTreeLayout } from './tree-layout';
 import { calculateCirclesLayout } from './circles-layout';
@@ -504,6 +505,79 @@ export const knowledgeGraphToCirclesGraphology = (
   });
   knowledgeGraph.relationships.forEach((rel) => {
     if (HIERARCHY_EDGE_STYLES[rel.type] === undefined) addCirclesEdge(rel);
+  });
+
+  return graph;
+};
+
+// ---------------------------------------------------------------------------
+// Domain graph (LLM-generated, business-domain view)
+// ---------------------------------------------------------------------------
+
+/** Visual style per domain-graph node type (domain / flow / step). */
+const DOMAIN_NODE_STYLE: Record<string, { color: string; size: number; mass: number }> = {
+  domain: { color: '#a855f7', size: 18, mass: 30 }, // Purple — top-level business area
+  flow: { color: '#f43f5e', size: 11, mass: 8 }, // Rose — business flow
+  step: { color: '#10b981', size: 6, mass: 2 }, // Emerald — flow step
+};
+
+/** Visual style per domain-graph edge type. */
+const DOMAIN_EDGE_STYLE: Record<string, { color: string; sizeMultiplier: number }> = {
+  contains_flow: { color: '#7c3aed', sizeMultiplier: 1.0 }, // domain → flow
+  flow_step: { color: '#0e7490', sizeMultiplier: 0.7 }, // flow → step
+  cross_domain: { color: '#c2410c', sizeMultiplier: 0.9 }, // domain ↔ domain
+};
+
+/**
+ * Converts an LLM-generated domain graph (domain/flow/step nodes) into a
+ * graphology graph for Sigma.js. Nodes are seeded on a golden-angle spiral so
+ * ForceAtlas2 (force layout) can spread them out; mass scales by node tier so
+ * domains anchor and steps orbit their flows.
+ */
+export const domainGraphToGraphology = (
+  domainGraph: UADomainGraph,
+): Graph<SigmaNodeAttributes, SigmaEdgeAttributes> => {
+  const graph = new Graph<SigmaNodeAttributes, SigmaEdgeAttributes>();
+  const nodeCount = domainGraph.nodes.length;
+  const spread = Math.sqrt(Math.max(nodeCount, 1)) * 60;
+  const goldenAngle = Math.PI * (3 - Math.sqrt(5));
+
+  domainGraph.nodes.forEach((node, index) => {
+    const style = DOMAIN_NODE_STYLE[node.type] ?? { color: '#9ca3af', size: 8, mass: 3 };
+    const angle = index * goldenAngle;
+    const radius = spread * Math.sqrt((index + 1) / Math.max(nodeCount, 1));
+    const x = radius * Math.cos(angle) + (Math.random() - 0.5) * 20;
+    const y = radius * Math.sin(angle) + (Math.random() - 0.5) * 20;
+
+    graph.addNode(node.id, {
+      x,
+      y,
+      size: style.size,
+      color: style.color,
+      label: node.name,
+      // Domain node types (domain/flow/step) are not GN NodeLabels; widen via
+      // cast since the sigma reducers/filters never key off nodeType here.
+      nodeType: node.type as unknown as NodeLabel,
+      filePath: node.filePath ?? '',
+      startLine: node.lineRange?.[0],
+      endLine: node.lineRange?.[1],
+      hidden: false,
+      mass: style.mass,
+    });
+  });
+
+  const edgeBaseSize = 1.5;
+  domainGraph.edges.forEach((edge) => {
+    if (!graph.hasNode(edge.source) || !graph.hasNode(edge.target)) return;
+    if (graph.hasEdge(edge.source, edge.target)) return;
+    const style = DOMAIN_EDGE_STYLE[edge.type] ?? { color: '#4a4a5a', sizeMultiplier: 0.6 };
+    graph.addEdge(edge.source, edge.target, {
+      size: edgeBaseSize * style.sizeMultiplier,
+      color: style.color,
+      relationType: edge.type,
+      type: 'curved',
+      curvature: 0.15 + Math.random() * 0.08,
+    });
   });
 
   return graph;

@@ -1,0 +1,252 @@
+{
+  "generatedAt": "2026-07-06T17:17:04.377Z",
+  "projectPath": "D:/cloud/deepcloud/super agent/GitNexus",
+  "projectSummary": {
+    "description": "Project rooted at D:\\cloud\\deepcloud\\super agent\\GitNexus",
+    "frameworks": [],
+    "layers": []
+  },
+  "nodes": [
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/api-e2e-test/app/api/grants/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/api-e2e-test/app/api/grants/route.ts",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/api-e2e-test/app/api/grants/route.ts",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/api-e2e-test/app/api/grants/route.ts"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/api-e2e-test/app/api/secure/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/api-e2e-test/app/api/secure/route.ts",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/api-e2e-test/app/api/secure/route.ts",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/api-e2e-test/app/api/secure/route.ts"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/fetch-wrapper-consumers/app/api/grants/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/fetch-wrapper-consumers/app/api/grants/route.ts",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/fetch-wrapper-consumers/app/api/grants/route.ts",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/fetch-wrapper-consumers/app/api/grants/route.ts"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/fetch-wrapper-consumers/app/api/users/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/fetch-wrapper-consumers/app/api/users/route.ts",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/fetch-wrapper-consumers/app/api/users/route.ts",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/fetch-wrapper-consumers/app/api/users/route.ts"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/nextjs-route-mapping/app/api/grants/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/nextjs-route-mapping/app/api/grants/route.ts",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/nextjs-route-mapping/app/api/grants/route.ts",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/nextjs-route-mapping/app/api/grants/route.ts"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/search/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/search/route.ts",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/search/route.ts",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/search/route.ts"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/users/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/users/route.ts",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/users/route.ts",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/users/route.ts"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/gdpr/export/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/gdpr/export/route.ts",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/gdpr/export/route.ts",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/shape-check-integration/app/api/gdpr/export/route.ts"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/nextjs-route-mapping/app/api/organizations/[slug]/grants/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/nextjs-route-mapping/app/api/organizations/[slug]/grants/route.ts",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/nextjs-route-mapping/app/api/organizations/[slug]/grants/route.ts",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/nextjs-route-mapping/app/api/organizations/[slug]/grants/route.ts"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/package.json",
+      "type": "file",
+      "name": "package.json",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/package.json",
+      "summary": "Source file package.json",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "package.json"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/fastapi-depends/app/api/calls.py",
+      "type": "file",
+      "name": "calls.py",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/fastapi-depends/app/api/calls.py",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/fastapi-depends/app/api/calls.py",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/fastapi-depends/app/api/calls.py"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/fastapi-depends/app/api/users.py",
+      "type": "file",
+      "name": "users.py",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/fastapi-depends/app/api/users.py",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/fastapi-depends/app/api/users.py",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/fastapi-depends/app/api/users.py"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-alias-imports/app/Services/Main.php",
+      "type": "file",
+      "name": "Main.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-alias-imports/app/Services/Main.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-alias-imports/app/Services/Main.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-alias-imports/app/Services/Main.php"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-ambiguous/app/Services/UserHandler.php",
+      "type": "file",
+      "name": "UserHandler.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-ambiguous/app/Services/UserHandler.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-ambiguous/app/Services/UserHandler.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-ambiguous/app/Services/UserHandler.php"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-app/app/Services/UserService.php",
+      "type": "file",
+      "name": "UserService.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-app/app/Services/UserService.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-app/app/Services/UserService.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-app/app/Services/UserService.php"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-assignment-chain/app/Services/AppService.php",
+      "type": "file",
+      "name": "AppService.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-assignment-chain/app/Services/AppService.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-assignment-chain/app/Services/AppService.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-assignment-chain/app/Services/AppService.php"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-calls/app/Services/UserService.php",
+      "type": "file",
+      "name": "UserService.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-calls/app/Services/UserService.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-calls/app/Services/UserService.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-calls/app/Services/UserService.php"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-constructor-type-inference/app/Services/AppService.php",
+      "type": "file",
+      "name": "AppService.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-constructor-type-inference/app/Services/AppService.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-constructor-type-inference/app/Services/AppService.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-constructor-type-inference/app/Services/AppService.php"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/Dynamic.php",
+      "type": "file",
+      "name": "Dynamic.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/Dynamic.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/Dynamic.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/Dynamic.php"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/OtherTargets.php",
+      "type": "file",
+      "name": "OtherTargets.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/OtherTargets.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/OtherTargets.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/OtherTargets.php"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/Targets.php",
+      "type": "file",
+      "name": "Targets.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/Targets.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/Targets.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-dynamic-calls/app/Services/Targets.php"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-fqn-cross-namespace/app/Services/Service.php",
+      "type": "file",
+      "name": "Service.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-fqn-cross-namespace/app/Services/Service.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-fqn-cross-namespace/app/Services/Service.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-fqn-cross-namespace/app/Services/Service.php"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-grandparent-resolution/app/Services/App.php",
+      "type": "file",
+      "name": "App.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-grandparent-resolution/app/Services/App.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-grandparent-resolution/app/Services/App.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-grandparent-resolution/app/Services/App.php"
+    },
+    {
+      "id": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-grouped-imports/app/Services/Main.php",
+      "type": "file",
+      "name": "Main.php",
+      "filePath": "D:/cloud/deepcloud/super agent/GitNexus/gitnexus/test/fixtures/lang-resolution/php-grouped-imports/app/Services/Main.php",
+      "summary": "Source file gitnexus/test/fixtures/lang-resolution/php-grouped-imports/app/Services/Main.php",
+      "tags": [],
+      "complexity": "moderate",
+      "relativePath": "gitnexus/test/fixtures/lang-resolution/php-grouped-imports/app/Services/Main.php"
+    }
+  ],
+  "edges": []
+}

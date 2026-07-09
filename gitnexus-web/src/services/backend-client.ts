@@ -719,6 +719,75 @@ export const readFile = async (
   return response.json() as Promise<ReadFileResult>;
 };
 
+// ── File git history / version / diff ────────────────────────────────────────
+
+/** A single commit touching a file (from /api/file/history). */
+export interface FileCommit {
+  hash: string;
+  author: string;
+  email: string;
+  date: string; // ISO-8601
+  message: string;
+}
+
+/** Fetch a file's commit history (most-recent first, follows renames). */
+export const fetchFileHistory = async (
+  filePath: string,
+  options?: { repo?: string; limit?: number },
+): Promise<FileCommit[]> => {
+  const params = [
+    `path=${encodeURIComponent(filePath)}`,
+    repoParam(options?.repo),
+    options?.limit !== undefined ? `limit=${options.limit}` : '',
+  ]
+    .filter(Boolean)
+    .join('&');
+  const response = await fetchWithTimeout(`${_backendUrl}/api/file/history?${params}`);
+  await assertOk(response);
+  const data = (await response.json()) as { commits: FileCommit[] };
+  return data.commits ?? [];
+};
+
+/** Fetch a file's content at a specific commit/ref. */
+export const fetchFileVersion = async (
+  filePath: string,
+  ref: string,
+  options?: { repo?: string },
+): Promise<string> => {
+  const params = [
+    `path=${encodeURIComponent(filePath)}`,
+    `ref=${encodeURIComponent(ref)}`,
+    repoParam(options?.repo),
+  ]
+    .filter(Boolean)
+    .join('&');
+  const response = await fetchWithTimeout(`${_backendUrl}/api/file/version?${params}`);
+  await assertOk(response);
+  const data = (await response.json()) as { content: string };
+  return data.content ?? '';
+};
+
+/** Fetch a unified diff of a file between two refs. */
+export const fetchFileDiff = async (
+  filePath: string,
+  from: string,
+  to: string,
+  options?: { repo?: string },
+): Promise<string> => {
+  const params = [
+    `path=${encodeURIComponent(filePath)}`,
+    `from=${encodeURIComponent(from)}`,
+    `to=${encodeURIComponent(to)}`,
+    repoParam(options?.repo),
+  ]
+    .filter(Boolean)
+    .join('&');
+  const response = await fetchWithTimeout(`${_backendUrl}/api/file/diff?${params}`);
+  await assertOk(response);
+  const data = (await response.json()) as { diff: string };
+  return data.diff ?? '';
+};
+
 /** Fetch all processes for a repo. */
 export const fetchProcesses = async (repo?: string): Promise<unknown> => {
   const response = await fetchWithTimeout(
@@ -753,6 +822,32 @@ export const fetchClusterDetail = async (repo: string, name: string): Promise<un
   );
   await assertOk(response);
   return response.json();
+};
+
+/**
+ * Fetch the cached domain graph for a repo. Returns `null` when none has been
+ * generated yet (server replies 404).
+ */
+export const fetchDomainGraph = async (repo?: string): Promise<unknown | null> => {
+  const response = await fetchWithTimeout(
+    `${_backendUrl}/api/domain-graph${repo ? `?${repoParam(repo)}` : ''}`,
+  );
+  if (response.status === 404) return null;
+  await assertOk(response);
+  return response.json();
+};
+
+/** Persist a generated domain graph for a repo. */
+export const saveDomainGraph = async (repo: string | undefined, graph: unknown): Promise<void> => {
+  const response = await fetchWithTimeout(
+    `${_backendUrl}/api/domain-graph${repo ? `?${repoParam(repo)}` : ''}`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(graph),
+    },
+  );
+  await assertOk(response);
 };
 
 // ── Analyze API ────────────────────────────────────────────────────────────

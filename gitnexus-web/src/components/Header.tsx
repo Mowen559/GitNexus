@@ -3,8 +3,6 @@ import {
   Settings,
   HelpCircle,
   Sparkles,
-  Github,
-  Star,
   FolderOpen,
   ChevronDown,
   Trash2,
@@ -26,6 +24,7 @@ import { GraphNode } from 'gitnexus-shared';
 import { EmbeddingStatus } from './EmbeddingStatus';
 import { RepoAnalyzer } from './RepoAnalyzer';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { ThemePicker } from './ThemePicker';
 import { translateProgressMessage } from '../i18n/progress';
 
 // Color mapping for node types in search results
@@ -440,19 +439,6 @@ export const Header = ({
 
       {/* Right section */}
       <div className="flex items-center gap-2">
-        {/* GitHub Star Button */}
-        <a
-          href="https://github.com/abhigyanpatwari/GitNexus"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-3.5 py-2 text-sm font-medium text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:from-purple-500 hover:to-pink-500 hover:shadow-xl"
-        >
-          <Github className="h-4 w-4" />
-          <span className="hidden sm:inline">{t('header:starIfCool')}</span>
-          <Star className="h-3.5 w-3.5 transition-all group-hover:fill-yellow-300 group-hover:text-yellow-300" />
-          <span className="hidden sm:inline">✨</span>
-        </a>
-
         {/* Stats */}
         {graph && (
           <div className="mr-2 flex items-center gap-4 text-xs text-text-muted">
@@ -465,6 +451,8 @@ export const Header = ({
         <EmbeddingStatus />
 
         <LanguageSwitcher />
+
+        <ThemePicker />
 
         {/* Icon buttons */}
         <button

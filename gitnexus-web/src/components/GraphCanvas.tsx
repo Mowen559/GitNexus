@@ -15,10 +15,15 @@ import {
 } from '@/lib/lucide-icons';
 import { useSigma } from '../hooks/useSigma';
 import { useAppState } from '../hooks/useAppState';
+import { useUAFeatures } from '../hooks/useUAFeatures';
+import { UA_ALL_NODE_TYPES, UA_ALL_COMPLEXITIES, type UAGraphNode } from '../core/graph/ua-model';
+import { setActiveSigma } from '../lib/sigma-registry';
+import LayerLegend from './LayerLegend';
 import {
   knowledgeGraphToGraphology,
   knowledgeGraphToTreeGraphology,
   knowledgeGraphToCirclesGraphology,
+  domainGraphToGraphology,
   filterGraphByDepth,
   SigmaNodeAttributes,
   SigmaEdgeAttributes,
@@ -33,7 +38,7 @@ export interface GraphCanvasHandle {
 }
 
 export const GraphCanvas = forwardRef<GraphCanvasHandle>((_, ref) => {
-  const { t } = useTranslation('graph');
+  const { t } = useTranslation(['graph', 'common']);
   const {
     graph,
     setSelectedNode,
@@ -56,7 +61,21 @@ export const GraphCanvas = forwardRef<GraphCanvasHandle>((_, ref) => {
     graphViewMode,
     setGraphViewMode,
   } = useAppState();
+  const {
+    uaGraph,
+    navigationLevel,
+    activeLayerId,
+    filters,
+    domainGraph,
+    domainGraphStatus,
+    domainGraphError,
+    activeGraphKind,
+    generateDomainGraphAction,
+    setSelectedDomainNode,
+  } = useUAFeatures();
   const [hoveredNodeName, setHoveredNodeName] = useState<string | null>(null);
+
+  const isDomainView = activeGraphKind === 'domain';
 
   const effectiveHighlightedNodeIds = useMemo(() => {
     if (!isAIHighlightsEnabled) return highlightedNodeIds;
@@ -89,8 +108,18 @@ export const GraphCanvas = forwardRef<GraphCanvasHandle>((_, ref) => {
     return new Map(graph.nodes.map((n) => [n.id, n]));
   }, [graph]);
 
+  const domainNodeById = useMemo(() => {
+    const map = new Map<string, UAGraphNode>();
+    domainGraph?.nodes.forEach((n) => map.set(n.id, n));
+    return map;
+  }, [domainGraph]);
+
   const handleNodeClick = useCallback(
     (nodeId: string) => {
+      if (isDomainView) {
+        setSelectedDomainNode(domainNodeById.get(nodeId) ?? null);
+        return;
+      }
       if (!graph) return;
       const node = nodeById.get(nodeId);
       if (node) {
@@ -98,24 +127,41 @@ export const GraphCanvas = forwardRef<GraphCanvasHandle>((_, ref) => {
         openCodePanel();
       }
     },
-    [graph, nodeById, setSelectedNode, openCodePanel],
+    [
+      isDomainView,
+      domainNodeById,
+      setSelectedDomainNode,
+      graph,
+      nodeById,
+      setSelectedNode,
+      openCodePanel,
+    ],
   );
 
   const handleNodeHover = useCallback(
     (nodeId: string | null) => {
-      if (!nodeId || !graph) {
+      if (!nodeId) {
+        setHoveredNodeName(null);
+        return;
+      }
+      if (isDomainView) {
+        setHoveredNodeName(domainNodeById.get(nodeId)?.name ?? null);
+        return;
+      }
+      if (!graph) {
         setHoveredNodeName(null);
         return;
       }
       const node = nodeById.get(nodeId);
       setHoveredNodeName(node ? node.properties.name : null);
     },
-    [graph, nodeById],
+    [isDomainView, domainNodeById, graph, nodeById],
   );
 
   const handleStageClick = useCallback(() => {
     setSelectedNode(null);
-  }, [setSelectedNode]);
+    setSelectedDomainNode(null);
+  }, [setSelectedNode, setSelectedDomainNode]);
 
   const handleToggleAIHighlights = useCallback(() => {
     if (isAIHighlightsEnabled) {
@@ -156,7 +202,7 @@ export const GraphCanvas = forwardRef<GraphCanvasHandle>((_, ref) => {
     blastRadiusNodeIds: effectiveBlastRadiusNodeIds,
     animatedNodes: effectiveAnimatedNodes,
     visibleEdgeTypes,
-    layoutMode: graphViewMode,
+    layoutMode: isDomainView ? 'force' : graphViewMode,
   });
 
   const handleViewModeChange = useCallback(
@@ -193,6 +239,16 @@ export const GraphCanvas = forwardRef<GraphCanvasHandle>((_, ref) => {
 
   // Update Sigma graph when KnowledgeGraph changes
   useEffect(() => {
+    // Domain view: render the LLM-generated domain graph (or an empty graph
+    // until one is generated). Uses force layout regardless of graphViewMode.
+    if (isDomainView) {
+      const domainSigmaGraph = domainGraph
+        ? domainGraphToGraphology(domainGraph)
+        : new Graph<SigmaNodeAttributes, SigmaEdgeAttributes>();
+      setSigmaGraph(domainSigmaGraph);
+      return;
+    }
+
     if (!graph) return;
 
     let sigmaGraph: Graph<SigmaNodeAttributes, SigmaEdgeAttributes>;
@@ -218,29 +274,98 @@ export const GraphCanvas = forwardRef<GraphCanvasHandle>((_, ref) => {
     }
 
     setSigmaGraph(sigmaGraph);
-  }, [graph, nodeById, setSigmaGraph, graphViewMode]);
+  }, [graph, nodeById, setSigmaGraph, graphViewMode, isDomainView, domainGraph]);
+
+  // Register the live Sigma instance for cross-cutting features (export,
+  // tour camera focus, layer drill-down) ported from Understand-Anything.
+  useEffect(() => {
+    setActiveSigma(sigmaRef.current);
+    return () => setActiveSigma(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- sigmaRef identity never changes
+  }, [graph]);
 
   // Update node visibility when filters change
   useEffect(() => {
     const sigma = sigmaRef.current;
     if (!sigma) return;
+    // Domain view has its own (small) graph and no structural/semantic filters.
+    if (isDomainView) return;
 
     const sigmaGraph = sigma.getGraph() as Graph<SigmaNodeAttributes, SigmaEdgeAttributes>;
     if (sigmaGraph.order === 0) return; // Don't filter empty graph
 
     filterGraphByDepth(sigmaGraph, appSelectedNode?.id || null, depthFilter, visibleLabels);
+
+    // Layer drill-down: when a layer is active, hide nodes outside that cluster.
+    if (navigationLevel === 'layer-detail' && activeLayerId) {
+      const activeLayer = uaGraph?.layers.find((l) => l.id === activeLayerId);
+      if (activeLayer) {
+        const memberSet = new Set(activeLayer.nodeIds);
+        sigmaGraph.forEachNode((nodeId) => {
+          if (!memberSet.has(nodeId)) {
+            sigmaGraph.setNodeAttribute(nodeId, 'hidden', true);
+          }
+        });
+      }
+    }
+
+    // UA semantic filters (FilterPanel): hide nodes whose type/complexity is
+    // deselected, or — when layer filters are active — that don't belong to a
+    // selected layer. Skipped entirely when all filters are at their defaults.
+    if (uaGraph) {
+      const allTypes = filters.nodeTypes.size === UA_ALL_NODE_TYPES.length;
+      const allComplexities = filters.complexities.size === UA_ALL_COMPLEXITIES.length;
+      const layerFilterActive = filters.layerIds.size > 0;
+
+      if (!allTypes || !allComplexities || layerFilterActive) {
+        const uaNodeById = new Map(uaGraph.nodes.map((n) => [n.id, n]));
+        const allowedByLayer = new Set<string>();
+        if (layerFilterActive) {
+          uaGraph.layers.forEach((layer) => {
+            if (filters.layerIds.has(layer.id)) {
+              layer.nodeIds.forEach((id) => allowedByLayer.add(id));
+            }
+          });
+        }
+
+        sigmaGraph.forEachNode((nodeId) => {
+          if (sigmaGraph.getNodeAttribute(nodeId, 'hidden')) return; // already hidden
+          const uaNode = uaNodeById.get(nodeId);
+          if (!uaNode) return;
+          const typeOk = allTypes || filters.nodeTypes.has(uaNode.type);
+          const complexityOk = allComplexities || filters.complexities.has(uaNode.complexity);
+          const layerOk = !layerFilterActive || allowedByLayer.has(nodeId);
+          if (!typeOk || !complexityOk || !layerOk) {
+            sigmaGraph.setNodeAttribute(nodeId, 'hidden', true);
+          }
+        });
+      }
+    }
+
     sigma.refresh();
     // eslint-disable-next-line react-hooks/exhaustive-deps -- sigmaRef identity never changes
-  }, [graph, graphViewMode, visibleLabels, depthFilter, appSelectedNode]);
+  }, [
+    graph,
+    graphViewMode,
+    visibleLabels,
+    depthFilter,
+    appSelectedNode,
+    navigationLevel,
+    activeLayerId,
+    uaGraph,
+    filters,
+    isDomainView,
+  ]);
 
   // Sync app selected node with sigma
   useEffect(() => {
+    if (isDomainView) return; // domain selection handled separately
     if (appSelectedNode) {
       setSigmaSelectedNode(appSelectedNode.id);
     } else {
       setSigmaSelectedNode(null);
     }
-  }, [appSelectedNode, setSigmaSelectedNode]);
+  }, [appSelectedNode, setSigmaSelectedNode, isDomainView]);
 
   // Focus on selected node
   const handleFocusSelected = useCallback(() => {
@@ -271,58 +396,109 @@ export const GraphCanvas = forwardRef<GraphCanvasHandle>((_, ref) => {
         />
       </div>
 
-      {/* View Mode Tabs */}
-      <div
-        role="tablist"
-        aria-label={t('canvas.viewModes.label')}
-        className="absolute top-4 left-1/2 z-20 flex -translate-x-1/2 gap-1 rounded-lg border border-border-subtle bg-elevated/90 p-1 backdrop-blur-sm"
-      >
-        <button
-          role="tab"
-          aria-selected={graphViewMode === 'force'}
-          onClick={() => handleViewModeChange('force')}
-          className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all ${
-            graphViewMode === 'force'
-              ? 'bg-accent text-white'
-              : 'text-text-secondary hover:bg-hover hover:text-text-primary'
-          }`}
+      {/* View Mode Tabs (structural view only) */}
+      {!isDomainView && (
+        <div
+          role="tablist"
+          aria-label={t('canvas.viewModes.label')}
+          className="absolute top-4 left-1/2 z-20 flex -translate-x-1/2 gap-1 rounded-lg border border-border-subtle bg-elevated/90 p-1 backdrop-blur-sm"
         >
-          <Network className="h-3.5 w-3.5" />
-          {t('canvas.viewModes.force')}
-        </button>
-        <button
-          role="tab"
-          aria-selected={graphViewMode === 'tree'}
-          onClick={() => handleViewModeChange('tree')}
-          className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all ${
-            graphViewMode === 'tree'
-              ? 'bg-accent text-white'
-              : 'text-text-secondary hover:bg-hover hover:text-text-primary'
-          }`}
-        >
-          <GitBranch className="h-3.5 w-3.5" />
-          {t('canvas.viewModes.tree')}
-        </button>
-        <button
-          role="tab"
-          aria-selected={graphViewMode === 'circles'}
-          onClick={() => handleViewModeChange('circles')}
-          className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all ${
-            graphViewMode === 'circles'
-              ? 'bg-accent text-white'
-              : 'text-text-secondary hover:bg-hover hover:text-text-primary'
-          }`}
-        >
-          <Target className="h-3.5 w-3.5" />
-          {t('canvas.viewModes.circles')}
-        </button>
-      </div>
+          <button
+            role="tab"
+            aria-selected={graphViewMode === 'force'}
+            onClick={() => handleViewModeChange('force')}
+            className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all ${
+              graphViewMode === 'force'
+                ? 'bg-accent text-white'
+                : 'text-text-secondary hover:bg-hover hover:text-text-primary'
+            }`}
+          >
+            <Network className="h-3.5 w-3.5" />
+            {t('canvas.viewModes.force')}
+          </button>
+          <button
+            role="tab"
+            aria-selected={graphViewMode === 'tree'}
+            onClick={() => handleViewModeChange('tree')}
+            className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all ${
+              graphViewMode === 'tree'
+                ? 'bg-accent text-white'
+                : 'text-text-secondary hover:bg-hover hover:text-text-primary'
+            }`}
+          >
+            <GitBranch className="h-3.5 w-3.5" />
+            {t('canvas.viewModes.tree')}
+          </button>
+          <button
+            role="tab"
+            aria-selected={graphViewMode === 'circles'}
+            onClick={() => handleViewModeChange('circles')}
+            className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-all ${
+              graphViewMode === 'circles'
+                ? 'bg-accent text-white'
+                : 'text-text-secondary hover:bg-hover hover:text-text-primary'
+            }`}
+          >
+            <Target className="h-3.5 w-3.5" />
+            {t('canvas.viewModes.circles')}
+          </button>
+        </div>
+      )}
 
       {/* Sigma container */}
       <div
         ref={containerRef}
         className="sigma-container h-full w-full cursor-grab active:cursor-grabbing"
       />
+
+      {/* Domain view empty / loading / error overlay */}
+      {isDomainView && !domainGraph && (
+        <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center">
+          <div className="pointer-events-auto max-w-md rounded-xl border border-border-default bg-elevated/95 px-6 py-5 text-center shadow-2xl backdrop-blur-sm">
+            {domainGraphStatus === 'loading' ? (
+              <>
+                <div className="mx-auto mb-3 h-6 w-6 animate-spin rounded-full border-2 border-accent border-t-transparent" />
+                <p className="text-sm text-text-secondary">{t('common:domainGraph.generating')}</p>
+              </>
+            ) : domainGraphStatus === 'error' ? (
+              <>
+                <p className="mb-2 text-sm font-medium text-[#c97070]">
+                  {t('common:domainGraph.error')}
+                </p>
+                {domainGraphError && (
+                  <p className="mb-3 text-xs text-text-muted">{domainGraphError}</p>
+                )}
+                <button
+                  onClick={generateDomainGraphAction}
+                  className="rounded-lg border border-accent/40 bg-accent/15 px-4 py-1.5 text-sm text-accent transition-colors hover:bg-accent/25"
+                >
+                  {t('common:domainGraph.retry')}
+                </button>
+              </>
+            ) : (
+              <>
+                <p className="mb-1 text-base font-semibold text-text-primary">
+                  {t('common:domainGraph.emptyTitle')}
+                </p>
+                <p className="mb-4 text-sm text-text-secondary">
+                  {t('common:domainGraph.emptyHint')}
+                </p>
+                <button
+                  onClick={generateDomainGraphAction}
+                  className="rounded-lg border border-accent/40 bg-accent/15 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/25"
+                >
+                  {t('common:domainGraph.generate')}
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Layer cluster legend / navigator */}
+      <div className="absolute bottom-4 left-4 z-20 max-w-[70%]">
+        <LayerLegend />
+      </div>
 
       {/* Hovered node tooltip - only show when NOT selected */}
       {hoveredNodeName && !sigmaSelectedNode && (

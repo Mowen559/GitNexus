@@ -82,5 +82,106 @@
   "units": {
     "elapsedSeconds": "{{seconds}}s",
     "elapsedMinutesSeconds": "{{minutes}}m {{seconds}}s"
+  },
+  "close": "Close",
+  "loading": "Loading…",
+  "menu": "Menu",
+  "preferences": "Preferences",
+  "nodeInfo": {
+    "title": "Node details",
+    "details": "Details",
+    "selectNode": "Select a node to inspect",
+    "file": "File",
+    "openCode": "Open code",
+    "viewHistory": "History",
+    "languageConcepts": "Language concepts",
+    "tags": "Tags",
+    "steps": "Steps",
+    "definedInThisFile": "Defined in this file",
+    "connections": "Connections"
+  },
+  "domainGraph": {
+    "structuralTab": "Structure",
+    "domainTab": "Domain",
+    "generate": "Generate domain graph",
+    "generating": "Generating domain graph…",
+    "error": "Failed to generate domain graph",
+    "retry": "Retry",
+    "emptyTitle": "No domain graph yet",
+    "emptyHint": "Generate a business-domain view from the analyzed codebase using your configured LLM.",
+    "entryPoint": "Entry point",
+    "entryType": "Entry type",
+    "entities": "Entities",
+    "businessRules": "Business rules",
+    "crossDomainInteractions": "Cross-domain interactions"
+  },
+  "tour": {
+    "title": "Guided tour",
+    "start": "Start guided tour",
+    "tour": "Tour",
+    "exit": "Exit",
+    "languageLesson": "Language lesson",
+    "referencedComponents": "Referenced components",
+    "prev": "Previous",
+    "next": "Next",
+    "finish": "Finish"
+  },
+  "pathFinder": {
+    "title": "Dependency Path Finder",
+    "tooltip": "Find dependency path",
+    "path": "Path",
+    "description": "Find the shortest path between two nodes in the dependency graph.",
+    "fromNode": "From Node",
+    "toNode": "To Node",
+    "selectNode": "Select a node...",
+    "searching": "Searching...",
+    "findPath": "Find Path",
+    "noPath": "No path found between these nodes.",
+    "pathFound": "Path Found"
+  },
+  "filter": {
+    "title": "Filter graph",
+    "filter": "Filter",
+    "nodeTypes": "Node types",
+    "complexity": "Complexity",
+    "layers": "Layers",
+    "edgeCategories": "Edge categories",
+    "resetAll": "Reset all"
+  },
+  "export": {
+    "title": "Export graph",
+    "label": "Export",
+    "asPNG": "Export as PNG",
+    "asSVG": "Export as SVG",
+    "asJSON": "Export as JSON"
+  },
+  "theme": {
+    "changeTheme": "Change theme",
+    "theme": "Theme",
+    "accentColor": "Accent color",
+    "headingFont": "Heading font",
+    "serif": "Serif",
+    "sans": "Sans",
+    "mono": "Mono"
+  },
+  "layer": {
+    "back": "All layers",
+    "label": "layers",
+    "nodes": "nodes"
+  },
+  "fileHistory": {
+    "title": "File history",
+    "noHistory": "No git history for this file",
+    "diff": "Diff",
+    "version": "Version",
+    "viewingVersion": "Viewing {{hash}}",
+    "comparing": "{{from}} → {{to}}",
+    "selectCommit": "Select a commit",
+    "noTextChange": "No textual changes in this file"
+  },
+  "mobile": {
+    "graph": "Graph",
+    "files": "Files",
+    "chat": "AI"
   }
 }
